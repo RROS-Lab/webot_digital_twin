@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<robot name="screw_driver" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find abb_tool_description)/urdf/screw_driver_macro.xacro"/>
+  <xacro:screw_driver prefix=""/>
+</robot>

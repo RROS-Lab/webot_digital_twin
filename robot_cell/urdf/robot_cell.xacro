@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+
+<robot name="lmsa" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- world -->
+  <link name="world" />
+
+  <!-- ABB with a screw driver -->
+  <xacro:include filename="$(find abb_irb120_support)/urdf/irb120_3_58_macro.xacro" />
+  <xacro:abb_irb120_3_58 prefix="" />
+    <joint name="abb_world_join" type="fixed">
+        <parent link="world" />
+        <child link="base_link" />
+        <origin xyz="0.0 0.0 0" />
+    </joint>
+
+    <xacro:include filename="$(find abb_tool_description)/urdf/screw_driver_macro.xacro" />
+    <xacro:screw_driver prefix=""/>
+    <joint name="abb_tool_join" type="fixed">
+        <parent link="flange" />
+        <child link="tool_mount" />
+        <origin rpy="0 1.57075 0" xyz="0.0 0.0 0" />
+    </joint>
+
+  <!-- S5 with a gripper -->
+  <xacro:include filename="$(find s5_description)/urdf/s5_macro.xacro"/>
+  <xacro:s5 prefix="s5_"/>
+  <xacro:include filename="$(find gripper_description)/urdf/robotiq_arg85_description.xacro" />
+  <joint name="gripper_join" type="fixed">
+    <parent link="s5_link_6" />
+    <child link="robotiq_85_base_link" />
+    <origin xyz="0.0 0.0 -0.03 " rpy="3.1415926 0.0 0.785398"/>
+  </joint>
+
+  <joint name="s5_join" type="fixed">
+    <parent link="world" />
+    <child link="s5_base_link" />
+    <origin xyz="0.734133 -0.648617 0" rpy="0 0 3.14" />
+  </joint>
+
+  <!-- C3 with a pneumatic gripper -->
+  <xacro:include filename="$(find epson_c3_support)/urdf/c3_with_cup_macro.xacro"/>
+  <xacro:c3_with_cup prefix="c3_"/>
+
+  <joint name="c3_join" type="fixed">
+    <parent link="world" />
+    <child link="c3_base_link" />
+    <origin xyz="-0.280736 -0.804148 0" />
+  </joint>
+
+  <!-- KUKA -->
+
+  <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find iiwa_description)/urdf/iiwa7.xacro" />
+
+  <xacro:include filename="$(find gripper_description)/urdf/prefix_robotiq_arg85_description.xacro" />
+
+
+  <xacro:arg name="hardware_interface" default="PositionJointInterface" />
+  <xacro:arg name="robot_name_1" default="iiwa1" />
+  <xacro:arg name="robot_name_2" default="iiwa2" />
+
+  <!--iiwa1-->
+  <xacro:iiwa7 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name_1)" parent="world">
+    <origin xyz="-0.2448 0.8473 0.0008" rpy="0.003626 0.00303 -0.0165" />
+    <!-- <origin xyz="-0.251497 0.834462 0" rpy="0 0 0" /> -->
+  </xacro:iiwa7>
+  <!--
+   <link
+    name="$(arg robot_name_1)extended_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.0483430560044756 0.062208572618075 0.130786209524131"
+        rpy="0 0 0" />
+      <mass
+        value="0.454193206646649" />
+      <inertia
+        ixx="0.000255516641384785"
+        ixy="1.57776442646039E-07"
+        ixz="-9.06555559420314E-09"
+        iyy="0.000385316223508459"
+        iyz="1.78449531458031E-06"
+        izz="0.00046456518327599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="$(arg robot_name_1)extended_gripper_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0481741127604408 0.130690688279842 0.0605"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="iiwa1_link_7" />
+    <child
+      link="$(arg robot_name_1)extended_gripper_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  -->
+
+  <xacro:robotiq_arg85 robot_name="$(arg robot_name_1)_" parent="$(arg robot_name_1)_flange" />
+  <!--
+<link
+    name="$(arg robot_name_1)extended_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.0483430560044756 0.062208572618075 0.130786209524131"
+        rpy="0 0 0" />
+      <mass
+        value="0.454193206646649" />
+      <inertia
+        ixx="0.000255516641384785"
+        ixy="1.57776442646039E-07"
+        ixz="-9.06555559420314E-09"
+        iyy="0.000385316223508459"
+        iyz="1.78449531458031E-06"
+        izz="0.00046456518327599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/robotiq/2-Finger_85_extended_grips_blue_Kuka.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/robotiq/2-Finger_85_extended_grips_blue_Kuka.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="$(arg robot_name_1)extended_gripper_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0481741127604408 0.130690688279842 0.0605"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="$(arg robot_name_1)_link_ee" />
+    <child
+      link="$(arg robot_name_1)extended_gripper_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  -->
+  <!--iiwa2-->
+  <xacro:iiwa7 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name_2)" parent="world">
+    <!-- <origin xyz="0.814136 0.504393 0" rpy="0 0 3.14" /> -->
+    <origin xyz="0.8091 0.5169 0.0021" rpy="-0.0045 0.0127 -3.1071" />
+  </xacro:iiwa7>
+  <!--
+  <xacro:robotiq_arg85 robot_name="$(arg robot_name_2)_" parent="$(arg robot_name_2)_link_ee" />
+  -->
+  
+  <link
+    name="$(arg robot_name_2)extended_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.0483430560044756 0.062208572618075 0.130786209524131"
+        rpy="0 0 0" />
+      <mass
+        value="0.454193206646649" />
+      <inertia
+        ixx="0.000255516641384785"
+        ixy="1.57776442646039E-07"
+        ixz="-9.06555559420314E-09"
+        iyy="0.000385316223508459"
+        iyz="1.78449531458031E-06"
+        izz="0.00046456518327599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="$(arg robot_name_2)extended_gripper_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0481741127604408 0.130690688279842 0.0605"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="iiwa2_link_7" />
+    <child
+      link="$(arg robot_name_2)extended_gripper_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+</robot>

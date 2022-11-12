@@ -1,0 +1,46 @@
+iiwa_manipulator_controller:
+  type: FollowJointTrajectory/iiwa_JointTrajectoryController
+  joints:
+    - iiwa_joint_1
+    - iiwa_joint_2
+    - iiwa_joint_3
+    - iiwa_joint_4
+    - iiwa_joint_5
+    - iiwa_joint_6
+    - iiwa_joint_7
+  gains:
+    iiwa_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa_joint_6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa_joint_7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

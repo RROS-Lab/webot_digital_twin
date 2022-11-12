@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <rosparam file="$(find zhao_webots_MSEC)/config/iiwa_7_ros_controllers.yaml" command="load"/>
+   <rosparam file="$(find zhao_webots_MSEC)/config/simple_iiwa_controller.yaml" command="load"/>  -->
+   <!-- <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args=" abb_controller iiwa7_controller iiwa7_green_controller c3_controller s5_controller" /> 
+   -->
+  
+  <!-- start Webots -->
+  <arg name="no_gui" default="false," doc="Start Webots with minimal GUI"/>
+  <include file="$(find zhao_Webots_MSEC_project)/launch/webots.launch">
+    <arg name="mode" value="realtime"/>
+    <arg name="no_gui" value="$(arg no_gui)"/>
+    <arg name="world" value="$(find zhao_Webots_MSEC_project)/worlds/Current_Cell_formation_digital_twin_tests_case_study.wbt"/>
+  </include>
+
+  <arg name="auto_close" default="false" doc="Startup mode"/>
+
+</launch>

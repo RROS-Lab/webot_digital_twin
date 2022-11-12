@@ -1,0 +1,53 @@
+  <link
+    name="extended_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.0483430560044756 0.062208572618075 0.130786209524131"
+        rpy="0 0 0" />
+      <mass
+        value="0.454193206646649" />
+      <inertia
+        ixx="0.000255516641384785"
+        ixy="1.57776442646039E-07"
+        ixz="-9.06555559420314E-09"
+        iyy="0.000385316223508459"
+        iyz="1.78449531458031E-06"
+        izz="0.00046456518327599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="extended_gripper_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0481741127604408 0.130690688279842 0.0853977018208851"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="link_7" />
+    <child
+      link="extended_gripper_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
