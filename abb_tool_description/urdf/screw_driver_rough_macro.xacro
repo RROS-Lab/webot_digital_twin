@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot name="abb_tool" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="screw_driver" params="prefix">
+        <material name = "pink">
+            <color rgba="1.0 0.7176470588235294 0.807843137254902 1.0" />
+        </material>
+
+        <link name="flange_mount">
+            <visual>
+                <origin rpy="0.0 0.0575 0.0005" xyz="0 0 0"/>
+                <geometry>
+                    <box size ="0.05 0.14 0.01"/>
+                </geometry>
+                <material name="pink"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <box size ="0.05 0.14 0.01"/>
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+</robot>

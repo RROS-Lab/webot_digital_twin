@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<robot name="abb_tool" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find abb_irb120_support)/urdf/irb120_3_58_macro.xacro" />
+    <xacro:abb_irb120_3_58 prefix="" />
+    <link name="world" />
+
+    <!-- ABB -->
+    <joint name="abb_world_join" type="fixed">
+        <parent link="world" />
+        <child link="base_link" />
+        <origin xyz="0.0 0.0 0" />
+    </joint>
+
+    <xacro:include filename="$(find abb_tool_description)/urdf/screw_driver_macro.xacro" />
+    <xacro:screw_driver prefix=""/>
+
+    <joint name="abb_tool_join" type="fixed">
+        <parent link="flange" />
+        <child link="tool_mount" />
+        <origin rpy="0 1.57075 0" xyz="0.0 0.0 0" />
+    </joint>
+    
+</robot>

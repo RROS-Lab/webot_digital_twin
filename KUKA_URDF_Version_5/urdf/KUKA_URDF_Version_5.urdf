@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="KUKA_URDF_Version_5">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-8.23511737919704E-07 -0.0128365621074739 0.0701068698449948"
+        rpy="0 0 0" />
+      <mass
+        value="3.86292001643786" />
+      <inertia
+        ixx="0.0177650213764454"
+        ixy="-1.27172130085026E-07"
+        ixz="4.66194331164664E-08"
+        iyy="0.0142249734163389"
+        iyz="0.000612834486375344"
+        izz="0.0169622498530289" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-1.47182007628141E-06 -0.0347314368201785 0.123513666495531"
+        rpy="0 0 0" />
+      <mass
+        value="2.70245661022576" />
+      <inertia
+        ixx="0.017086841210477"
+        ixy="-2.89501394873082E-08"
+        ixz="1.53941511679728E-07"
+        iyy="0.0163002926165472"
+        iyz="0.0030424390883859"
+        izz="0.00602934030894992" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.1475"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.96706"
+      upper="2.96706"
+      effort="0"
+      velocity="1.71042" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-9.85946206589125E-07 -0.0673264797866535 0.0339139236736676"
+        rpy="0 0 0" />
+      <mass
+        value="2.72576490761316" />
+      <inertia
+        ixx="0.0170487827766729"
+        ixy="5.60454060066105E-08"
+        ixz="-1.94352744885993E-10"
+        iyy="0.00609559579437958"
+        iyz="-0.00283688835257612"
+        izz="0.0162453385231183" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="0 0 0.193"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="0"
+      velocity="1.71042" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="5.90496277472626E-07 0.029563717059354 0.136503448756891"
+        rpy="0 0 0" />
+      <mass
+        value="3.1751416773228" />
+      <inertia
+        ixx="0.0250787626796888"
+        ixy="-7.66221359011273E-08"
+        ixz="-1.82817176844778E-07"
+        iyy="0.0238075491469019"
+        iyz="-0.00487390685916508"
+        izz="0.00760816812680929" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="continuous">
+    <origin
+      xyz="0 -0.174 -0.000500000000000045"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.9671"
+      upper="2.9671"
+      effort="0"
+      velocity="1.7453" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="2.85160321169215E-07 -0.0673270391679657 -0.0339138366460867"
+        rpy="0 0 0" />
+      <mass
+        value="2.72574899351326" />
+      <inertia
+        ixx="0.0170488238575106"
+        ixy="-6.10054669103315E-08"
+        ixz="-5.7830902318856E-08"
+        iyy="0.0060955422460185"
+        iyz="0.00283688215271815"
+        izz="0.0162452690943062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="continuous">
+    <origin
+      xyz="0 0 0.2255"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="0"
+      velocity="2.26893" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="-0.000427104481119387 -0.021382184721028 0.0854689468847926"
+        rpy="0 0 0" />
+      <mass
+        value="1.6938479313783" />
+      <inertia
+        ixx="0.010079022635319"
+        ixy="-2.75052565659249E-05"
+        ixz="6.17284433693558E-05"
+        iyy="0.00870363537142671"
+        iyz="0.00308995793269608"
+        izz="0.00446948977776789" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="continuous">
+    <origin
+      xyz="0 -0.174 0.000500000000000067"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.9671"
+      upper="2.9671"
+      effort="0"
+      velocity="2.4435" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="-3.62267929758693E-05 0.00212095815879487 0.000210767560785248"
+        rpy="0 0 0" />
+      <mass
+        value="1.83671422431897" />
+      <inertia
+        ixx="0.00509405014866571"
+        ixy="2.51774001619867E-05"
+        ixz="4.01311200153297E-06"
+        iyy="0.00354310566820398"
+        iyz="-0.000249594236575303"
+        izz="0.00489903878590526" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="continuous">
+    <origin
+      xyz="0 0 0.2255"
+      rpy="1.5707963267949 0.0162613743878159 -0.0199582716554755" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="0"
+      velocity="3.14159" />
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="-0.000350586782875326 0.000200324434634181 0.031832643949022"
+        rpy="0 0 0" />
+      <mass
+        value="0.468707260148188" />
+      <inertia
+        ixx="0.000455200479364619"
+        ixy="3.82414069564461E-07"
+        ixz="4.12608825148657E-06"
+        iyy="0.000456724145763562"
+        iyz="3.95523025788467E-08"
+        izz="0.000586696994250743" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/link_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_7"
+    type="continuous">
+    <origin
+      xyz="-0.00130735688110192 0.0803893700559062 0.000700000000000073"
+      rpy="-1.5707963267949 0.0199582716554755 0.0162613743878159" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0543"
+      upper="3.0543"
+      effort="0"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="extended_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.0483430560044756 0.062208572618075 0.130786209524131"
+        rpy="0 0 0" />
+      <mass
+        value="0.454193206646649" />
+      <inertia
+        ixx="0.000255516641384785"
+        ixy="1.57776442646039E-07"
+        ixz="-9.06555559420314E-09"
+        iyy="0.000385316223508459"
+        iyz="1.78449531458031E-06"
+        izz="0.00046456518327599" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KUKA_URDF_Version_5/meshes/extended_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="extended_gripper_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0481741127604408 0.130690688279842 0.0853977018208851"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="link_7" />
+    <child
+      link="extended_gripper_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

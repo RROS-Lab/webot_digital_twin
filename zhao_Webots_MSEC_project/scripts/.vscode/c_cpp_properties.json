@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lmsa-ubuntu2/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/lmsa-ubuntu2/catkin_ws/src/iiwa_stack/iiwa_hw/include/**",
+        "/home/lmsa-ubuntu2/catkin_ws/src/iiwa_stack/iiwa_robotiq_description/include/**",
+        "/home/lmsa-ubuntu2/catkin_ws/src/iiwa_stack/iiwa_ros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

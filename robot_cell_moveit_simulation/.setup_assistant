@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_cell
+    relative_path: urdf/robot_cell.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/lmsa.srdf
+  CONFIG:
+    author_name: zhao
+    author_email: zyu05354@usc.edu
+    generated_timestamp: 1668201474

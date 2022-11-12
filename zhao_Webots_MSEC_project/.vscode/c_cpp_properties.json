@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zhaoyu/zhao_webots_MSEC/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/zhaoyu/zhao_yaskawa_ws/devel/include/**",
+        "/home/zhaoyu/zhao_webots_MSEC/src/iiwa_stack_cam/iiwa_hw/include/**",
+        "/home/zhaoyu/zhao_webots_MSEC/src/iiwa_stack_cam/iiwa_ros/include/**",
+        "/home/zhaoyu/zhao_yaskawa_ws/src/ma1400_sim/include/**",
+        "/home/zhaoyu/zhao_yaskawa_ws/src/motoman/motoman_driver/include/**",
+        "/home/zhaoyu/zhao_yaskawa_ws/src/vacuum_gripper_position/include/**",
+        "/home/zhaoyu/zhao_yaskawa_ws/src/webots_yaskawa_tests/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

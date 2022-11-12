@@ -1,0 +1,212 @@
+Abb_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+  gains:
+    joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint_6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+Epson_C3_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - c3_joint_1
+    - c3_joint_2
+    - c3_joint_3
+    - c3_joint_4
+    - c3_joint_5
+    - c3_joint_6
+  gains:
+    c3_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    c3_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    c3_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    c3_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    c3_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    c3_joint_6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+Epson_S5_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - s5_joint_1
+    - s5_joint_2
+    - s5_joint_3
+    - s5_joint_4
+    - s5_joint_5
+    - s5_joint_6
+  gains:
+    s5_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    s5_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    s5_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    s5_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    s5_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    s5_joint_6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+Green_Kuka_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - iiwa2_joint_1
+    - iiwa2_joint_2
+    - iiwa2_joint_3
+    - iiwa2_joint_4
+    - iiwa2_joint_5
+    - iiwa2_joint_6
+    - iiwa2_joint_7
+  gains:
+    iiwa2_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa2_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa2_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa2_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa2_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa2_joint_6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa2_joint_7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+Blue_Kuka_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - iiwa1_joint_1
+    - iiwa1_joint_2
+    - iiwa1_joint_3
+    - iiwa1_joint_4
+    - iiwa1_joint_5
+    - iiwa1_joint_6
+    - iiwa1_joint_7
+  gains:
+    iiwa1_joint_1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa1_joint_2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa1_joint_3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa1_joint_4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa1_joint_5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa1_joint_6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    iiwa1_joint_7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

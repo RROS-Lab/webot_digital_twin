@@ -1,0 +1,51 @@
+controller_list:
+  - name: fake_Abb_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
+  - name: fake_Epson_C3_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - c3_joint_1
+      - c3_joint_2
+      - c3_joint_3
+      - c3_joint_4
+      - c3_joint_5
+      - c3_joint_6
+  - name: fake_Epson_S5_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - s5_joint_1
+      - s5_joint_2
+      - s5_joint_3
+      - s5_joint_4
+      - s5_joint_5
+      - s5_joint_6
+  - name: fake_Green_Kuka_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - iiwa2_joint_1
+      - iiwa2_joint_2
+      - iiwa2_joint_3
+      - iiwa2_joint_4
+      - iiwa2_joint_5
+      - iiwa2_joint_6
+      - iiwa2_joint_7
+  - name: fake_Blue_Kuka_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - iiwa1_joint_1
+      - iiwa1_joint_2
+      - iiwa1_joint_3
+      - iiwa1_joint_4
+      - iiwa1_joint_5
+      - iiwa1_joint_6
+      - iiwa1_joint_7
+initial:  # Define initial robot poses per group
+  - group: Abb
+    pose: All_Zero

@@ -1,0 +1,2938 @@
+#VRML_SIM R2022a utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the Lmsa
+# Extracted from: /home/cam/webot_ws/src/robot_cell/urdf/abb_with_screw_driver.urdf
+
+PROTO full_robot_assemblies [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+  field  SFString    name            "full_robot_assemblies"  # Is `Robot.name`.
+  field  SFString    controller      "void"  # Is `Robot.controller`.
+  field  MFString    controllerArgs  []      # Is `Robot.controllerArgs`.
+  field  SFString    customData      ""      # Is `Robot.customData`.
+  field  SFBool      supervisor      FALSE   # Is `Robot.supervisor`.
+  field  SFBool      synchronization TRUE    # Is `Robot.synchronization`.
+  field  SFBool      selfCollision   FALSE   # Is `Robot.selfCollision`.
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    controllerArgs IS controllerArgs
+    customData IS customData
+    supervisor IS supervisor
+    synchronization IS synchronization
+    selfCollision IS selfCollision
+    children [
+      Solid {
+        translation 0.000000 0.000000 0.000000
+        rotation 0.000000 0.000000 1.000000 0.000000
+        children [
+          Shape {
+            appearance DEF base_link_material PBRAppearance {
+              baseColor 0.737255 0.349020 0.160784
+              transparency 0.000000
+              roughness 1.000000
+              metalness 0
+              emissiveColor 0.000000 0.000000 0.000000
+            }
+            geometry DEF base_link Mesh {
+              url "/home/cam/webot_ws/src/abb_experimental/abb_irb120_support/meshes/irb120_3_58/visual/base_link.stl"
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.000000 1.000000
+              anchor 0.000000 0.000000 0.000000
+              dampingConstant 0.0
+              staticFriction 0.0
+            }
+            device [
+              RotationalMotor {
+                name "joint_1"
+                maxVelocity 4.36332
+                minPosition -2.87979
+                maxPosition 2.87979
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "joint_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.000000 0.000000 0.000000
+              rotation 0.000000 0.000000 1.000000 0.000000
+              children [
+                Shape {
+                  appearance DEF link_1_material PBRAppearance {
+                    baseColor 0.737255 0.349020 0.160784
+                    transparency 0.000000
+                    roughness 1.000000
+                    metalness 0
+                    emissiveColor 0.000000 0.000000 0.000000
+                  }
+                  geometry DEF link_1 Mesh {
+                    url "/home/cam/webot_ws/src/abb_experimental/abb_irb120_support/meshes/irb120_3_58/visual/link_1.stl"
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000000 1.000000 0.000000
+                    anchor 0.000000 0.000000 0.290000
+                    dampingConstant 0.0
+                    staticFriction 0.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "joint_2"
+                      maxVelocity 4.36332
+                      minPosition -1.91986
+                      maxPosition 1.91986
+                      maxTorque 10000
+                    }
+                    PositionSensor {
+                      name "joint_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.000000 0.000000 0.290000
+                    rotation 0.000000 0.000000 1.000000 0.000000
+                    children [
+                      Shape {
+                        appearance DEF link_2_material PBRAppearance {
+                          baseColor 0.737255 0.349020 0.160784
+                          transparency 0.000000
+                          roughness 1.000000
+                          metalness 0
+                          emissiveColor 0.000000 0.000000 0.000000
+                        }
+                        geometry DEF link_2 Mesh {
+                          url "/home/cam/webot_ws/src/abb_experimental/abb_irb120_support/meshes/irb120_3_58/visual/link_2.stl"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0.000000 1.000000 0.000000
+                          anchor 0.000000 0.000000 0.270000
+                          dampingConstant 0.0
+                          staticFriction 0.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "joint_3"
+                            maxVelocity 4.36332
+                            minPosition -1.91986
+                            maxPosition 1.22173
+                            maxTorque 10000
+                          }
+                          PositionSensor {
+                            name "joint_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0.000000 0.000000 0.270000
+                          rotation 0.000000 0.000000 1.000000 0.000000
+                          children [
+                            Shape {
+                              appearance DEF link_3_material PBRAppearance {
+                                baseColor 0.737255 0.349020 0.160784
+                                transparency 0.000000
+                                roughness 1.000000
+                                metalness 0
+                                emissiveColor 0.000000 0.000000 0.000000
+                              }
+                              geometry DEF link_3 Mesh {
+                                url "/home/cam/webot_ws/src/abb_experimental/abb_irb120_support/meshes/irb120_3_58/visual/link_3.stl"
+                              }
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 1.000000 0.000000 0.000000
+                                anchor 0.000000 0.000000 0.070000
+                                dampingConstant 0.0
+                                staticFriction 0.0
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "joint_4"
+                                  maxVelocity 5.58505
+                                  minPosition -2.79253
+                                  maxPosition 2.79253
+                                  maxTorque 10000
+                                }
+                                PositionSensor {
+                                  name "joint_4_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation 0.000000 0.000000 0.070000
+                                rotation 0.000000 0.000000 1.000000 0.000000
+                                children [
+                                  Shape {
+                                    appearance DEF link_4_material PBRAppearance {
+                                      baseColor 0.737255 0.349020 0.160784
+                                      transparency 0.000000
+                                      roughness 1.000000
+                                      metalness 0
+                                      emissiveColor 0.000000 0.000000 0.000000
+                                    }
+                                    geometry DEF link_4 Mesh {
+                                      url "/home/cam/webot_ws/src/abb_experimental/abb_irb120_support/meshes/irb120_3_58/visual/link_4.stl"
+                                    }
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 0.000000 1.000000 0.000000
+                                      anchor 0.302000 0.000000 0.000000
+                                      dampingConstant 0.0
+                                      staticFriction 0.0
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "joint_5"
+                                        maxVelocity 5.58505
+                                        minPosition -2.094395
+                                        maxPosition 2.094395
+                                        maxTorque 10000
+                                      }
+                                      PositionSensor {
+                                        name "joint_5_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation 0.302000 0.000000 0.000000
+                                      rotation 0.000000 0.000000 1.000000 0.000000
+                                      children [
+                                        Shape {
+                                          appearance DEF link_5_material PBRAppearance {
+                                            baseColor 0.737255 0.349020 0.160784
+                                            transparency 0.000000
+                                            roughness 1.000000
+                                            metalness 0
+                                            emissiveColor 0.000000 0.000000 0.000000
+                                          }
+                                          geometry DEF link_5 Mesh {
+                                            url "/home/cam/webot_ws/src/abb_experimental/abb_irb120_support/meshes/irb120_3_58/visual/link_5.stl"
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 1.000000 0.000000 0.000000
+                                            anchor 0.072000 0.000000 0.000000
+                                            dampingConstant 0.0
+                                            staticFriction 0.0
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "joint_6"
+                                              maxVelocity 7.33038
+                                              minPosition -6.98132
+                                              maxPosition 6.98132
+                                              maxTorque 10000
+                                            }
+                                            PositionSensor {
+                                              name "joint_6_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.072000 0.000000 0.000000
+                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                            children [
+                                              Shape {
+                                                appearance DEF link_6_material PBRAppearance {
+                                                  baseColor 0.188235 0.196078 0.203922
+                                                  transparency 0.000000
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                }
+                                                geometry DEF link_6 Mesh {
+                                                  url "/home/cam/webot_ws/src/abb_experimental/abb_irb120_support/meshes/irb120_3_58/visual/link_6.stl"
+                                                }
+                                              }
+                                              Solid {
+                                                translation 0.000000 0.000000 0.000000
+                                                rotation 0.000000 1.000000 0.000000 1.570750
+                                                children [
+                                                  Shape {
+                                                    appearance PBRAppearance {
+                                                      baseColor 0.500000 0.500000 0.500000
+                                                      transparency 0.000000
+                                                      roughness 1.000000
+                                                      metalness 0
+                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                    }
+                                                    geometry DEF screw_driver_link Mesh {
+                                                      url "/home/cam/webot_ws/src/abb_tool_description/meshes/screw_driver/visual/screw_driver_link.STL"
+                                                    }
+                                                  }
+                                                ]
+                                                name "tool_mount"
+                                                boundingObject USE screw_driver_link
+                                                physics Physics {
+                                                  density -1
+                                                  mass 6.215000
+                                                  centerOfMass [ -0.042040 0.000080 0.079640 ]
+                                                  inertiaMatrix [
+                                                    2.472720e-02 4.912850e-02 4.723760e-02
+                                                    -8.078400e-05 1.309020e-03 -8.041900e-06
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                            name "link_6"
+                                            boundingObject USE link_6
+                                            physics Physics {
+                                              density -1
+                                              mass 0.137000
+                                              centerOfMass [ -0.007060 -0.000170 -0.000001 ]
+                                              inertiaMatrix [
+                                                1.000000e-03 1.000000e-03 1.000000e-03
+                                                0.000000e+00 0.000000e+00 0.000000e+00
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "link_5"
+                                      boundingObject USE link_5
+                                      physics Physics {
+                                        density -1
+                                        mass 0.546000
+                                        centerOfMass [ -0.001090 0.000037 0.000062 ]
+                                        inertiaMatrix [
+                                          4.048910e-04 8.928250e-04 8.154680e-04
+                                          1.619430e-06 8.468050e-07 -1.517920e-08
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "link_4"
+                                boundingObject USE link_4
+                                physics Physics {
+                                  density -1
+                                  mass 1.328000
+                                  centerOfMass [ 0.224700 0.000150 0.000410 ]
+                                  inertiaMatrix [
+                                    2.846610e-03 4.013460e-03 5.253500e-03
+                                    -2.127650e-05 -1.643500e-05 1.313360e-05
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "link_3"
+                          boundingObject USE link_3
+                          physics Physics {
+                            density -1
+                            mass 2.944000
+                            centerOfMass [ 0.022810 0.001060 0.057910 ]
+                            inertiaMatrix [
+                              8.356060e-03 1.671300e-02 1.269840e-02
+                              -8.015450e-05 1.428840e-03 -1.822270e-04
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "link_2"
+                    boundingObject USE link_2
+                    physics Physics {
+                      density -1
+                      mass 3.909000
+                      centerOfMass [ 0.000780 -0.002120 0.101240 ]
+                      inertiaMatrix [
+                        6.031110e-02 4.156900e-02 2.595480e-02
+                        9.834310e-06 5.724070e-05 -5.049700e-04
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "link_1"
+              boundingObject USE link_1
+              physics Physics {
+                density -1
+                mass 3.067000
+                centerOfMass [ 0.000098 -0.000120 0.238410 ]
+                inertiaMatrix [
+                  1.421750e-02 1.440410e-02 1.045330e-02
+                  -1.285790e-05 -2.313640e-05 1.934040e-05
+                ]
+              }
+            }
+          }
+        ]
+        name "base_link"
+        boundingObject USE base_link
+        physics Physics {
+          density -1
+          mass 6.215000
+          centerOfMass [ -0.042040 0.000080 0.079640 ]
+          inertiaMatrix [
+            2.472720e-02 4.912850e-02 4.723760e-02
+            -8.078400e-05 1.309020e-03 -8.041900e-06
+          ]
+        }
+      }
+      Solid {
+        translation -0.251497 0.834462 0.000000
+        rotation 0.000000 0.000000 1.000000 0.000000
+        children [
+          Shape {
+            appearance DEF Grey PBRAppearance {
+              baseColor 0.500000 0.500000 0.500000
+              transparency 0.000000
+              roughness 1.000000
+              metalness 0
+              emissiveColor 0.000000 0.000000 0.000000
+            }
+            geometry DEF link_0 Mesh {
+              url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_0.stl"
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.000000 1.000000
+              anchor 0.000000 0.000000 0.150000
+              dampingConstant 0.5
+              staticFriction 0.0
+            }
+            device [
+              RotationalMotor {
+                name "iiwa1_joint_1"
+                maxVelocity 10.0
+                minPosition -2.9670597283903604
+                maxPosition 2.9670597283903604
+                maxTorque 300.0
+              }
+              PositionSensor {
+                name "iiwa1_joint_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.000000 0.000000 0.150000
+              rotation 0.000000 0.000000 1.000000 0.000000
+              children [
+                Transform {
+                  translation 0.000000 0.000000 0.007500
+                  rotation 0.000000 0.000000 1.000000 0.000000
+                  children [
+                    Shape {
+                      appearance DEF Orange PBRAppearance {
+                        baseColor 0.500000 0.500000 0.500000
+                        transparency 0.000000
+                        roughness 1.000000
+                        metalness 0
+                        emissiveColor 0.000000 0.000000 0.000000
+                      }
+                      geometry DEF link_1 Mesh {
+                        url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_1.stl"
+                      }
+                    }
+                  ]
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000000 1.000000 0.000000
+                    anchor 0.000000 0.000000 0.190000
+                    dampingConstant 0.5
+                    staticFriction 0.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "iiwa1_joint_2"
+                      maxVelocity 10.0
+                      minPosition -2.0943951023931953
+                      maxPosition 2.0943951023931953
+                      maxTorque 300.0
+                    }
+                    PositionSensor {
+                      name "iiwa1_joint_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.000000 0.000000 0.190000
+                    rotation 0.000000 0.707107 0.707107 3.141593
+                    children [
+                      Shape {
+                        appearance USE Orange
+                        geometry DEF link_2 Mesh {
+                          url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_2.stl"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0.000000 1.000000 0.000000
+                          anchor 0.000000 0.210000 0.000000
+                          dampingConstant 0.5
+                          staticFriction 0.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "iiwa1_joint_3"
+                            maxVelocity 10.0
+                            minPosition -2.9670597283903604
+                            maxPosition 2.9670597283903604
+                            maxTorque 300.0
+                          }
+                          PositionSensor {
+                            name "iiwa1_joint_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0.000000 0.210000 0.000000
+                          rotation 0.000000 0.707107 0.707107 3.141593
+                          children [
+                            Transform {
+                              translation 0.000000 0.000000 -0.026000
+                              rotation 0.000000 0.000000 1.000000 0.000000
+                              children [
+                                Shape {
+                                  appearance USE Orange
+                                  geometry DEF link_3 Mesh {
+                                    url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_3.stl"
+                                  }
+                                }
+                              ]
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 -1.000000 0.000000
+                                anchor 0.000000 0.000000 0.190000
+                                dampingConstant 0.5
+                                staticFriction 0.0
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "iiwa1_joint_4"
+                                  maxVelocity 10.0
+                                  minPosition -2.0943951023931953
+                                  maxPosition 2.0943951023931953
+                                  maxTorque 300.0
+                                }
+                                PositionSensor {
+                                  name "iiwa1_joint_4_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation 0.000000 0.000000 0.190000
+                                rotation 1.000000 0.000000 0.000000 1.570796
+                                children [
+                                  Shape {
+                                    appearance USE Orange
+                                    geometry DEF link_4 Mesh {
+                                      url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_4.stl"
+                                    }
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 0.000000 1.000000 -0.000000
+                                      anchor 0.000000 0.210000 0.000000
+                                      dampingConstant 0.5
+                                      staticFriction 0.0
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "iiwa1_joint_5"
+                                        maxVelocity 10.0
+                                        minPosition -2.9670597283903604
+                                        maxPosition 2.9670597283903604
+                                        maxTorque 300.0
+                                      }
+                                      PositionSensor {
+                                        name "iiwa1_joint_5_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation 0.000000 0.210000 0.000000
+                                      rotation -0.000000 0.707107 0.707107 3.141593
+                                      children [
+                                        Transform {
+                                          translation 0.000000 0.000000 -0.026000
+                                          rotation 0.000000 0.000000 1.000000 0.000000
+                                          children [
+                                            Shape {
+                                              appearance USE Orange
+                                              geometry DEF link_5 Mesh {
+                                                url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_5.stl"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 -1.000000 0.000000
+                                            anchor 0.000000 0.060700 0.190000
+                                            dampingConstant 0.5
+                                            staticFriction 0.0
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "iiwa1_joint_6"
+                                              maxVelocity 10.0
+                                              minPosition -2.0943951023931953
+                                              maxPosition 2.0943951023931953
+                                              maxTorque 300.0
+                                            }
+                                            PositionSensor {
+                                              name "iiwa1_joint_6_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.000000 0.060700 0.190000
+                                            rotation 1.000000 0.000000 0.000000 1.570796
+                                            children [
+                                              Shape {
+                                                appearance USE Orange
+                                                geometry DEF link_6 Mesh {
+                                                  url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_6.stl"
+                                                }
+                                              }
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.000000 1.000000 -0.000000
+                                                  anchor 0.000000 0.081000 0.060700
+                                                  dampingConstant 0.5
+                                                  staticFriction 0.0
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "iiwa1_joint_7"
+                                                    maxVelocity 10.0
+                                                    minPosition -3.0543261909900763
+                                                    maxPosition 3.0543261909900763
+                                                    maxTorque 300.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "iiwa1_joint_7_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 0.081000 0.060700
+                                                  rotation -0.000000 0.707107 0.707107 3.141593
+                                                  children [
+                                                    Transform {
+                                                      translation 0.000000 0.000000 -0.000500
+                                                      rotation 0.000000 0.000000 1.000000 0.000000
+                                                      children [
+                                                        Shape {
+                                                          appearance USE Grey
+                                                          geometry DEF link_7 Mesh {
+                                                            url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_7.stl"
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                    Solid {
+                                                      translation 0.000000 0.000000 0.045000
+                                                      rotation 1.000000 0.000000 0.000000 0.000000
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF iiwa1_robotiq_85_base_link_material PBRAppearance {
+                                                            baseColor 0.100000 0.100000 0.100000
+                                                            transparency 0.000000
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                            emissiveColor 0.000000 0.000000 0.000000
+                                                          }
+                                                          geometry DEF robotiq_85_base_link_fine Mesh {
+                                                            url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/robotiq_85_base_link_fine.stl"
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis 0.000000 -1.000000 0.000000
+                                                            anchor 0.030601 0.000000 0.062792
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa1_finger_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.725
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa1_finger_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.030601 0.000000 0.062792
+                                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa1_left_outer_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry DEF outer_knuckle_fine Mesh {
+                                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_knuckle_fine.stl"
+                                                                }
+                                                              }
+                                                              Solid {
+                                                                translation 0.031691 0.000000 -0.001934
+                                                                rotation 0.000000 0.000000 1.000000 0.000000
+                                                                children [
+                                                                  Shape {
+                                                                    appearance DEF iiwa1_left_outer_finger_material PBRAppearance {
+                                                                      baseColor 0.100000 0.100000 0.100000
+                                                                      transparency 0.000000
+                                                                      roughness 1.000000
+                                                                      metalness 0
+                                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                                    }
+                                                                    geometry DEF outer_finger_fine Mesh {
+                                                                      url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_finger_fine.stl"
+                                                                    }
+                                                                  }
+                                                                ]
+                                                                name "iiwa1_left_outer_finger"
+                                                                boundingObject DEF outer_finger_coarse Mesh {
+                                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_finger_coarse.stl"
+                                                                }
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.027309
+                                                                  centerOfMass [ 0.001315 0.000000 0.021540 ]
+                                                                  inertiaMatrix [
+                                                                    8.516296e-06 6.913333e-06 2.250068e-06
+                                                                    2.581743e-19 3.838295e-07 -7.585899e-19
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa1_left_outer_knuckle"
+                                                            boundingObject DEF outer_knuckle_coarse Mesh {
+                                                              url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_knuckle_coarse.stl"
+                                                            }
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.006848
+                                                              centerOfMass [ 0.017833 0.000000 0.002144 ]
+                                                              inertiaMatrix [
+                                                                2.668320e-07 1.388923e-06 1.266033e-06
+                                                                1.661423e-15 1.459456e-07 2.829512e-15
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis 0.000000 -1.000000 0.000000
+                                                            anchor 0.012700 0.000000 0.069307
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa1_left_inner_knuckle_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa1_left_inner_knuckle_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.012700 0.000000 0.069307
+                                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa1_left_inner_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry DEF inner_knuckle_fine Mesh {
+                                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_knuckle_fine.stl"
+                                                                }
+                                                              }
+                                                              HingeJoint {
+                                                                jointParameters HingeJointParameters {
+                                                                  axis 0.000000 -1.000000 0.000000
+                                                                  anchor 0.034585 0.000000 0.045497
+                                                                  dampingConstant 0.0
+                                                                  staticFriction 0.0
+                                                                }
+                                                                device [
+                                                                  RotationalMotor {
+                                                                    name "iiwa1_left_inner_finger_joint"
+                                                                    maxVelocity 2.0
+                                                                    maxPosition 0.8757
+                                                                    maxTorque 1000.0
+                                                                  }
+                                                                  PositionSensor {
+                                                                    name "iiwa1_left_inner_finger_joint_sensor"
+                                                                  }
+                                                                ]
+                                                                endPoint Solid {
+                                                                  translation 0.034585 0.000000 0.045497
+                                                                  rotation 0.000000 0.000000 1.000000 0.000000
+                                                                  children [
+                                                                    Shape {
+                                                                      appearance DEF iiwa1_left_inner_finger_material PBRAppearance {
+                                                                        baseColor 0.100000 0.100000 0.100000
+                                                                        transparency 0.000000
+                                                                        roughness 1.000000
+                                                                        metalness 0
+                                                                        emissiveColor 0.000000 0.000000 0.000000
+                                                                      }
+                                                                      geometry DEF inner_finger_fine Mesh {
+                                                                        url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_finger_fine.stl"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                  name "iiwa1_left_inner_finger"
+                                                                  boundingObject DEF inner_finger_coarse Mesh {
+                                                                    url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_finger_coarse.stl"
+                                                                  }
+                                                                  physics Physics {
+                                                                    density -1
+                                                                    mass 0.007243
+                                                                    centerOfMass [ 0.006028 -0.000000 0.006699 ]
+                                                                    inertiaMatrix [
+                                                                      1.478243e-06 1.700645e-06 4.771513e-07
+                                                                      -3.948845e-19 -3.452688e-07 3.505984e-19
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa1_left_inner_knuckle"
+                                                            boundingObject DEF inner_knuckle_coarse Mesh {
+                                                              url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_knuckle_coarse.stl"
+                                                            }
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.011093
+                                                              centerOfMass [ 0.017098 -0.000000 0.022492 ]
+                                                              inertiaMatrix [
+                                                                4.233928e-06 3.965488e-06 3.240680e-06
+                                                                5.748979e-15 1.788557e-06 1.054647e-14
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis -0.000000 -1.000000 0.000000
+                                                            anchor -0.012700 0.000000 0.069308
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa1_right_inner_knuckle_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa1_right_inner_knuckle_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation -0.012700 0.000000 0.069308
+                                                            rotation 0.000000 0.000000 1.000000 3.141593
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa1_right_inner_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry USE inner_knuckle_fine
+                                                              }
+                                                              HingeJoint {
+                                                                jointParameters HingeJointParameters {
+                                                                  axis 0.000000 1.000000 0.000000
+                                                                  anchor 0.034106 0.000000 0.045857
+                                                                  dampingConstant 0.0
+                                                                  staticFriction 0.0
+                                                                }
+                                                                device [
+                                                                  RotationalMotor {
+                                                                    name "iiwa1_right_inner_finger_joint"
+                                                                    maxVelocity 2.0
+                                                                    maxPosition 0.8757
+                                                                    maxTorque 1000.0
+                                                                  }
+                                                                  PositionSensor {
+                                                                    name "iiwa1_right_inner_finger_joint_sensor"
+                                                                  }
+                                                                ]
+                                                                endPoint Solid {
+                                                                  translation 0.034106 0.000000 0.045857
+                                                                  rotation 0.000000 0.000000 1.000000 0.000000
+                                                                  children [
+                                                                    Shape {
+                                                                      appearance DEF iiwa1_right_inner_finger_material PBRAppearance {
+                                                                        baseColor 0.100000 0.100000 0.100000
+                                                                        transparency 0.000000
+                                                                        roughness 1.000000
+                                                                        metalness 0
+                                                                        emissiveColor 0.000000 0.000000 0.000000
+                                                                      }
+                                                                      geometry USE inner_finger_fine
+                                                                    }
+                                                                  ]
+                                                                  name "iiwa1_right_inner_finger"
+                                                                  boundingObject USE inner_finger_coarse
+                                                                  physics Physics {
+                                                                    density -1
+                                                                    mass 0.007243
+                                                                    centerOfMass [ 0.006028 -0.000000 0.006699 ]
+                                                                    inertiaMatrix [
+                                                                      1.478243e-06 1.700645e-06 4.771512e-07
+                                                                      -3.959521e-19 -3.452687e-07 3.552865e-19
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa1_right_inner_knuckle"
+                                                            boundingObject USE inner_knuckle_coarse
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.011093
+                                                              centerOfMass [ 0.016861 0.000000 0.022670 ]
+                                                              inertiaMatrix [
+                                                                4.271348e-06 3.965488e-06 3.203260e-06
+                                                                -8.535685e-15 1.777742e-06 -8.451080e-15
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis -0.000000 -1.000000 0.000000
+                                                            anchor -0.030601 0.000000 0.062792
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa1_right_outer_knuckle_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa1_right_outer_knuckle_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation -0.030601 0.000000 0.062792
+                                                            rotation 0.000000 0.000000 1.000000 3.141593
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa1_right_outer_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry USE outer_knuckle_fine
+                                                              }
+                                                              Solid {
+                                                                translation 0.031710 0.000000 -0.001601
+                                                                rotation 0.000000 0.000000 1.000000 0.000000
+                                                                children [
+                                                                  Shape {
+                                                                    appearance DEF iiwa1_right_outer_finger_material PBRAppearance {
+                                                                      baseColor 0.100000 0.100000 0.100000
+                                                                      transparency 0.000000
+                                                                      roughness 1.000000
+                                                                      metalness 0
+                                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                                    }
+                                                                    geometry USE outer_finger_fine
+                                                                  }
+                                                                ]
+                                                                name "iiwa1_right_outer_finger"
+                                                                boundingObject USE outer_finger_coarse
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.027309
+                                                                  centerOfMass [ 0.001088 -0.000000 0.021553 ]
+                                                                  inertiaMatrix [
+                                                                    8.523660e-06 6.913333e-06 2.242704e-06
+                                                                    3.416834e-19 3.180037e-07 7.377267e-19
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa1_right_outer_knuckle"
+                                                            boundingObject USE outer_knuckle_coarse
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.006848
+                                                              centerOfMass [ 0.017810 0.000000 0.002331 ]
+                                                              inertiaMatrix [
+                                                                2.700044e-07 1.388923e-06 1.262861e-06
+                                                                1.595795e-15 1.563965e-07 2.823578e-15
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "iiwa1_robotiq_85_base_link"
+                                                      boundingObject DEF robotiq_85_base_link_coarse Mesh {
+                                                        url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/robotiq_85_base_link_coarse.stl"
+                                                      }
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.309150
+                                                        centerOfMass [ 0.000220 -0.000000 0.030163 ]
+                                                        inertiaMatrix [
+                                                          2.897200e-04 3.073700e-04 1.991400e-04
+                                                          -5.787900e-10 -1.854300e-06 1.682000e-12
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                  name "iiwa1_link_7"
+                                                  boundingObject USE link_7
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 3.129000
+                                                    centerOfMass [ 0.000000 0.000000 0.020000 ]
+                                                    inertiaMatrix [
+                                                      1.464000e-02 1.465000e-02 2.872000e-03
+                                                      5.912000e-04 0.000000e+00 0.000000e+00
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "iiwa1_link_6"
+                                            boundingObject USE link_6
+                                            physics Physics {
+                                              density -1
+                                              mass 2.346600
+                                              centerOfMass [ 0.000000 0.000600 0.000400 ]
+                                              inertiaMatrix [
+                                                6.509000e-03 6.259000e-03 4.527000e-03
+                                                0.000000e+00 0.000000e+00 3.189100e-04
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "iiwa1_link_5"
+                                      boundingObject USE link_5
+                                      physics Physics {
+                                        density -1
+                                        mass 2.163300
+                                        centerOfMass [ 0.000100 0.021000 0.076000 ]
+                                        inertiaMatrix [
+                                          1.287000e-02 5.708000e-03 1.112000e-02
+                                          0.000000e+00 0.000000e+00 -3.946000e-03
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "iiwa1_link_4"
+                                boundingObject USE link_4
+                                physics Physics {
+                                  density -1
+                                  mass 3.482200
+                                  centerOfMass [ 0.000000 0.067000 0.034000 ]
+                                  inertiaMatrix [
+                                    2.178000e-02 2.075000e-02 7.785000e-03
+                                    0.000000e+00 0.000000e+00 -3.625000e-03
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "iiwa1_link_3"
+                          boundingObject USE link_3
+                          physics Physics {
+                            density -1
+                            mass 4.056230
+                            centerOfMass [ 0.000000 0.030000 0.130000 ]
+                            inertiaMatrix [
+                              3.204000e-02 9.720000e-03 3.042000e-02
+                              0.000000e+00 0.000000e+00 6.227000e-03
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "iiwa1_link_2"
+                    boundingObject USE link_2
+                    physics Physics {
+                      density -1
+                      mass 3.482100
+                      centerOfMass [ 0.000300 0.059000 0.042000 ]
+                      inertiaMatrix [
+                        2.076000e-02 2.179000e-02 7.790000e-03
+                        0.000000e+00 -3.626000e-03 0.000000e+00
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "iiwa1_link_1"
+              boundingObject USE link_1
+              physics Physics {
+                density -1
+                mass 3.452500
+                centerOfMass [ 0.000000 -0.030000 0.120000 ]
+                inertiaMatrix [
+                  2.183000e-02 7.703000e-03 2.083000e-02
+                  0.000000e+00 0.000000e+00 -3.887000e-03
+                ]
+              }
+            }
+          }
+        ]
+        name "iiwa1_link_0"
+        boundingObject USE link_0
+        physics Physics {
+          density -1
+          mass 5.000000
+          centerOfMass [ -0.100000 0.000000 0.070000 ]
+          inertiaMatrix [
+            5.000000e-02 6.000000e-02 3.000000e-02
+            0.000000e+00 0.000000e+00 0.000000e+00
+          ]
+        }
+      }
+      Solid {
+        translation 0.814136 0.504393 0.000000
+        rotation 0.000000 0.000000 1.000000 3.140000
+        children [
+          Shape {
+            appearance DEF Grey PBRAppearance {
+              baseColor 0.500000 0.500000 0.500000
+              transparency 0.000000
+              roughness 1.000000
+              metalness 0
+              emissiveColor 0.000000 0.000000 0.000000
+            }
+            geometry DEF link_0 Mesh {
+              url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_0.stl"
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.000000 1.000000
+              anchor 0.000000 0.000000 0.150000
+              dampingConstant 0.5
+              staticFriction 0.0
+            }
+            device [
+              RotationalMotor {
+                name "iiwa2_joint_1"
+                maxVelocity 10.0
+                minPosition -2.9670597283903604
+                maxPosition 2.9670597283903604
+                maxTorque 300.0
+              }
+              PositionSensor {
+                name "iiwa2_joint_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.000000 0.000000 0.150000
+              rotation 0.000000 0.000000 1.000000 0.000000
+              children [
+                Transform {
+                  translation 0.000000 0.000000 0.007500
+                  rotation 0.000000 0.000000 1.000000 0.000000
+                  children [
+                    Shape {
+                      appearance DEF Orange PBRAppearance {
+                        baseColor 0.500000 0.500000 0.500000
+                        transparency 0.000000
+                        roughness 1.000000
+                        metalness 0
+                        emissiveColor 0.000000 0.000000 0.000000
+                      }
+                      geometry DEF link_1 Mesh {
+                        url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_1.stl"
+                      }
+                    }
+                  ]
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000000 1.000000 0.000000
+                    anchor 0.000000 0.000000 0.190000
+                    dampingConstant 0.5
+                    staticFriction 0.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "iiwa2_joint_2"
+                      maxVelocity 10.0
+                      minPosition -2.0943951023931953
+                      maxPosition 2.0943951023931953
+                      maxTorque 300.0
+                    }
+                    PositionSensor {
+                      name "iiwa2_joint_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.000000 0.000000 0.190000
+                    rotation 0.000000 0.707107 0.707107 3.141593
+                    children [
+                      Shape {
+                        appearance USE Orange
+                        geometry DEF link_2 Mesh {
+                          url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_2.stl"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0.000000 1.000000 0.000000
+                          anchor 0.000000 0.210000 0.000000
+                          dampingConstant 0.5
+                          staticFriction 0.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "iiwa2_joint_3"
+                            maxVelocity 10.0
+                            minPosition -2.9670597283903604
+                            maxPosition 2.9670597283903604
+                            maxTorque 300.0
+                          }
+                          PositionSensor {
+                            name "iiwa2_joint_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0.000000 0.210000 0.000000
+                          rotation 0.000000 0.707107 0.707107 3.141593
+                          children [
+                            Transform {
+                              translation 0.000000 0.000000 -0.026000
+                              rotation 0.000000 0.000000 1.000000 0.000000
+                              children [
+                                Shape {
+                                  appearance USE Orange
+                                  geometry DEF link_3 Mesh {
+                                    url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_3.stl"
+                                  }
+                                }
+                              ]
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 0.000000 -1.000000 0.000000
+                                anchor 0.000000 0.000000 0.190000
+                                dampingConstant 0.5
+                                staticFriction 0.0
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "iiwa2_joint_4"
+                                  maxVelocity 10.0
+                                  minPosition -2.0943951023931953
+                                  maxPosition 2.0943951023931953
+                                  maxTorque 300.0
+                                }
+                                PositionSensor {
+                                  name "iiwa2_joint_4_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation 0.000000 0.000000 0.190000
+                                rotation 1.000000 0.000000 0.000000 1.570796
+                                children [
+                                  Shape {
+                                    appearance USE Orange
+                                    geometry DEF link_4 Mesh {
+                                      url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_4.stl"
+                                    }
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 0.000000 1.000000 -0.000000
+                                      anchor 0.000000 0.210000 0.000000
+                                      dampingConstant 0.5
+                                      staticFriction 0.0
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "iiwa2_joint_5"
+                                        maxVelocity 10.0
+                                        minPosition -2.9670597283903604
+                                        maxPosition 2.9670597283903604
+                                        maxTorque 300.0
+                                      }
+                                      PositionSensor {
+                                        name "iiwa2_joint_5_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation 0.000000 0.210000 0.000000
+                                      rotation -0.000000 0.707107 0.707107 3.141593
+                                      children [
+                                        Transform {
+                                          translation 0.000000 0.000000 -0.026000
+                                          rotation 0.000000 0.000000 1.000000 0.000000
+                                          children [
+                                            Shape {
+                                              appearance USE Orange
+                                              geometry DEF link_5 Mesh {
+                                                url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_5.stl"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 0.000000 -1.000000 0.000000
+                                            anchor 0.000000 0.060700 0.190000
+                                            dampingConstant 0.5
+                                            staticFriction 0.0
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "iiwa2_joint_6"
+                                              maxVelocity 10.0
+                                              minPosition -2.0943951023931953
+                                              maxPosition 2.0943951023931953
+                                              maxTorque 300.0
+                                            }
+                                            PositionSensor {
+                                              name "iiwa2_joint_6_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.000000 0.060700 0.190000
+                                            rotation 1.000000 0.000000 0.000000 1.570796
+                                            children [
+                                              Shape {
+                                                appearance USE Orange
+                                                geometry DEF link_6 Mesh {
+                                                  url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_6.stl"
+                                                }
+                                              }
+                                              HingeJoint {
+                                                jointParameters HingeJointParameters {
+                                                  axis 0.000000 1.000000 -0.000000
+                                                  anchor 0.000000 0.081000 0.060700
+                                                  dampingConstant 0.5
+                                                  staticFriction 0.0
+                                                }
+                                                device [
+                                                  RotationalMotor {
+                                                    name "iiwa2_joint_7"
+                                                    maxVelocity 10.0
+                                                    minPosition -3.0543261909900763
+                                                    maxPosition 3.0543261909900763
+                                                    maxTorque 300.0
+                                                  }
+                                                  PositionSensor {
+                                                    name "iiwa2_joint_7_sensor"
+                                                  }
+                                                ]
+                                                endPoint Solid {
+                                                  translation 0.000000 0.081000 0.060700
+                                                  rotation -0.000000 0.707107 0.707107 3.141593
+                                                  children [
+                                                    Transform {
+                                                      translation 0.000000 0.000000 -0.000500
+                                                      rotation 0.000000 0.000000 1.000000 0.000000
+                                                      children [
+                                                        Shape {
+                                                          appearance USE Grey
+                                                          geometry DEF link_7 Mesh {
+                                                            url "/home/cam/webot_ws/src/iiwa_stack_cam/iiwa_description/meshes/iiwa7/visual/link_7.stl"
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                    Solid {
+                                                      translation 0.000000 0.000000 0.045000
+                                                      rotation 1.000000 0.000000 0.000000 0.000000
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF iiwa2_robotiq_85_base_link_material PBRAppearance {
+                                                            baseColor 0.100000 0.100000 0.100000
+                                                            transparency 0.000000
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                            emissiveColor 0.000000 0.000000 0.000000
+                                                          }
+                                                          geometry DEF robotiq_85_base_link_fine Mesh {
+                                                            url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/robotiq_85_base_link_fine.stl"
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis 0.000000 -1.000000 0.000000
+                                                            anchor 0.030601 0.000000 0.062792
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa2_finger_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.725
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa2_finger_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.030601 0.000000 0.062792
+                                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa2_left_outer_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry DEF outer_knuckle_fine Mesh {
+                                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_knuckle_fine.stl"
+                                                                }
+                                                              }
+                                                              Solid {
+                                                                translation 0.031691 0.000000 -0.001934
+                                                                rotation 0.000000 0.000000 1.000000 0.000000
+                                                                children [
+                                                                  Shape {
+                                                                    appearance DEF iiwa2_left_outer_finger_material PBRAppearance {
+                                                                      baseColor 0.100000 0.100000 0.100000
+                                                                      transparency 0.000000
+                                                                      roughness 1.000000
+                                                                      metalness 0
+                                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                                    }
+                                                                    geometry DEF outer_finger_fine Mesh {
+                                                                      url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_finger_fine.stl"
+                                                                    }
+                                                                  }
+                                                                ]
+                                                                name "iiwa2_left_outer_finger"
+                                                                boundingObject DEF outer_finger_coarse Mesh {
+                                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_finger_coarse.stl"
+                                                                }
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.027309
+                                                                  centerOfMass [ 0.001315 0.000000 0.021540 ]
+                                                                  inertiaMatrix [
+                                                                    8.516296e-06 6.913333e-06 2.250068e-06
+                                                                    2.581743e-19 3.838295e-07 -7.585899e-19
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa2_left_outer_knuckle"
+                                                            boundingObject DEF outer_knuckle_coarse Mesh {
+                                                              url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_knuckle_coarse.stl"
+                                                            }
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.006848
+                                                              centerOfMass [ 0.017833 0.000000 0.002144 ]
+                                                              inertiaMatrix [
+                                                                2.668320e-07 1.388923e-06 1.266033e-06
+                                                                1.661423e-15 1.459456e-07 2.829512e-15
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis 0.000000 -1.000000 0.000000
+                                                            anchor 0.012700 0.000000 0.069307
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa2_left_inner_knuckle_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa2_left_inner_knuckle_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.012700 0.000000 0.069307
+                                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa2_left_inner_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry DEF inner_knuckle_fine Mesh {
+                                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_knuckle_fine.stl"
+                                                                }
+                                                              }
+                                                              HingeJoint {
+                                                                jointParameters HingeJointParameters {
+                                                                  axis 0.000000 -1.000000 0.000000
+                                                                  anchor 0.034585 0.000000 0.045497
+                                                                  dampingConstant 0.0
+                                                                  staticFriction 0.0
+                                                                }
+                                                                device [
+                                                                  RotationalMotor {
+                                                                    name "iiwa2_left_inner_finger_joint"
+                                                                    maxVelocity 2.0
+                                                                    maxPosition 0.8757
+                                                                    maxTorque 1000.0
+                                                                  }
+                                                                  PositionSensor {
+                                                                    name "iiwa2_left_inner_finger_joint_sensor"
+                                                                  }
+                                                                ]
+                                                                endPoint Solid {
+                                                                  translation 0.034585 0.000000 0.045497
+                                                                  rotation 0.000000 0.000000 1.000000 0.000000
+                                                                  children [
+                                                                    Shape {
+                                                                      appearance DEF iiwa2_left_inner_finger_material PBRAppearance {
+                                                                        baseColor 0.100000 0.100000 0.100000
+                                                                        transparency 0.000000
+                                                                        roughness 1.000000
+                                                                        metalness 0
+                                                                        emissiveColor 0.000000 0.000000 0.000000
+                                                                      }
+                                                                      geometry DEF inner_finger_fine Mesh {
+                                                                        url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_finger_fine.stl"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                  name "iiwa2_left_inner_finger"
+                                                                  boundingObject DEF inner_finger_coarse Mesh {
+                                                                    url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_finger_coarse.stl"
+                                                                  }
+                                                                  physics Physics {
+                                                                    density -1
+                                                                    mass 0.007243
+                                                                    centerOfMass [ 0.006028 -0.000000 0.006699 ]
+                                                                    inertiaMatrix [
+                                                                      1.478243e-06 1.700645e-06 4.771513e-07
+                                                                      -3.948845e-19 -3.452688e-07 3.505984e-19
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa2_left_inner_knuckle"
+                                                            boundingObject DEF inner_knuckle_coarse Mesh {
+                                                              url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_knuckle_coarse.stl"
+                                                            }
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.011093
+                                                              centerOfMass [ 0.017098 -0.000000 0.022492 ]
+                                                              inertiaMatrix [
+                                                                4.233928e-06 3.965488e-06 3.240680e-06
+                                                                5.748979e-15 1.788557e-06 1.054647e-14
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis -0.000000 -1.000000 0.000000
+                                                            anchor -0.012700 0.000000 0.069308
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa2_right_inner_knuckle_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa2_right_inner_knuckle_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation -0.012700 0.000000 0.069308
+                                                            rotation 0.000000 0.000000 1.000000 3.141593
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa2_right_inner_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry USE inner_knuckle_fine
+                                                              }
+                                                              HingeJoint {
+                                                                jointParameters HingeJointParameters {
+                                                                  axis 0.000000 1.000000 0.000000
+                                                                  anchor 0.034106 0.000000 0.045857
+                                                                  dampingConstant 0.0
+                                                                  staticFriction 0.0
+                                                                }
+                                                                device [
+                                                                  RotationalMotor {
+                                                                    name "iiwa2_right_inner_finger_joint"
+                                                                    maxVelocity 2.0
+                                                                    maxPosition 0.8757
+                                                                    maxTorque 1000.0
+                                                                  }
+                                                                  PositionSensor {
+                                                                    name "iiwa2_right_inner_finger_joint_sensor"
+                                                                  }
+                                                                ]
+                                                                endPoint Solid {
+                                                                  translation 0.034106 0.000000 0.045857
+                                                                  rotation 0.000000 0.000000 1.000000 0.000000
+                                                                  children [
+                                                                    Shape {
+                                                                      appearance DEF iiwa2_right_inner_finger_material PBRAppearance {
+                                                                        baseColor 0.100000 0.100000 0.100000
+                                                                        transparency 0.000000
+                                                                        roughness 1.000000
+                                                                        metalness 0
+                                                                        emissiveColor 0.000000 0.000000 0.000000
+                                                                      }
+                                                                      geometry USE inner_finger_fine
+                                                                    }
+                                                                  ]
+                                                                  name "iiwa2_right_inner_finger"
+                                                                  boundingObject USE inner_finger_coarse
+                                                                  physics Physics {
+                                                                    density -1
+                                                                    mass 0.007243
+                                                                    centerOfMass [ 0.006028 -0.000000 0.006699 ]
+                                                                    inertiaMatrix [
+                                                                      1.478243e-06 1.700645e-06 4.771512e-07
+                                                                      -3.959521e-19 -3.452687e-07 3.552865e-19
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa2_right_inner_knuckle"
+                                                            boundingObject USE inner_knuckle_coarse
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.011093
+                                                              centerOfMass [ 0.016861 0.000000 0.022670 ]
+                                                              inertiaMatrix [
+                                                                4.271348e-06 3.965488e-06 3.203260e-06
+                                                                -8.535685e-15 1.777742e-06 -8.451080e-15
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis -0.000000 -1.000000 0.000000
+                                                            anchor -0.030601 0.000000 0.062792
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "iiwa2_right_outer_knuckle_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "iiwa2_right_outer_knuckle_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation -0.030601 0.000000 0.062792
+                                                            rotation 0.000000 0.000000 1.000000 3.141593
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF iiwa2_right_outer_knuckle_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry USE outer_knuckle_fine
+                                                              }
+                                                              Solid {
+                                                                translation 0.031710 0.000000 -0.001601
+                                                                rotation 0.000000 0.000000 1.000000 0.000000
+                                                                children [
+                                                                  Shape {
+                                                                    appearance DEF iiwa2_right_outer_finger_material PBRAppearance {
+                                                                      baseColor 0.100000 0.100000 0.100000
+                                                                      transparency 0.000000
+                                                                      roughness 1.000000
+                                                                      metalness 0
+                                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                                    }
+                                                                    geometry USE outer_finger_fine
+                                                                  }
+                                                                ]
+                                                                name "iiwa2_right_outer_finger"
+                                                                boundingObject USE outer_finger_coarse
+                                                                physics Physics {
+                                                                  density -1
+                                                                  mass 0.027309
+                                                                  centerOfMass [ 0.001088 -0.000000 0.021553 ]
+                                                                  inertiaMatrix [
+                                                                    8.523660e-06 6.913333e-06 2.242704e-06
+                                                                    3.416834e-19 3.180037e-07 7.377267e-19
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "iiwa2_right_outer_knuckle"
+                                                            boundingObject USE outer_knuckle_coarse
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.006848
+                                                              centerOfMass [ 0.017810 0.000000 0.002331 ]
+                                                              inertiaMatrix [
+                                                                2.700044e-07 1.388923e-06 1.262861e-06
+                                                                1.595795e-15 1.563965e-07 2.823578e-15
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "iiwa2_robotiq_85_base_link"
+                                                      boundingObject DEF robotiq_85_base_link_coarse Mesh {
+                                                        url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/robotiq_85_base_link_coarse.stl"
+                                                      }
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.309150
+                                                        centerOfMass [ 0.000220 -0.000000 0.030163 ]
+                                                        inertiaMatrix [
+                                                          2.897200e-04 3.073700e-04 1.991400e-04
+                                                          -5.787900e-10 -1.854300e-06 1.682000e-12
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                  name "iiwa2_link_7"
+                                                  boundingObject USE link_7
+                                                  physics Physics {
+                                                    density -1
+                                                    mass 3.129000
+                                                    centerOfMass [ 0.000000 0.000000 0.020000 ]
+                                                    inertiaMatrix [
+                                                      1.464000e-02 1.465000e-02 2.872000e-03
+                                                      5.912000e-04 0.000000e+00 0.000000e+00
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                            name "iiwa2_link_6"
+                                            boundingObject USE link_6
+                                            physics Physics {
+                                              density -1
+                                              mass 2.346600
+                                              centerOfMass [ 0.000000 0.000600 0.000400 ]
+                                              inertiaMatrix [
+                                                6.509000e-03 6.259000e-03 4.527000e-03
+                                                0.000000e+00 0.000000e+00 3.189100e-04
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "iiwa2_link_5"
+                                      boundingObject USE link_5
+                                      physics Physics {
+                                        density -1
+                                        mass 2.163300
+                                        centerOfMass [ 0.000100 0.021000 0.076000 ]
+                                        inertiaMatrix [
+                                          1.287000e-02 5.708000e-03 1.112000e-02
+                                          0.000000e+00 0.000000e+00 -3.946000e-03
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "iiwa2_link_4"
+                                boundingObject USE link_4
+                                physics Physics {
+                                  density -1
+                                  mass 3.482200
+                                  centerOfMass [ 0.000000 0.067000 0.034000 ]
+                                  inertiaMatrix [
+                                    2.178000e-02 2.075000e-02 7.785000e-03
+                                    0.000000e+00 0.000000e+00 -3.625000e-03
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "iiwa2_link_3"
+                          boundingObject USE link_3
+                          physics Physics {
+                            density -1
+                            mass 4.056230
+                            centerOfMass [ 0.000000 0.030000 0.130000 ]
+                            inertiaMatrix [
+                              3.204000e-02 9.720000e-03 3.042000e-02
+                              0.000000e+00 0.000000e+00 6.227000e-03
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "iiwa2_link_2"
+                    boundingObject USE link_2
+                    physics Physics {
+                      density -1
+                      mass 3.482100
+                      centerOfMass [ 0.000300 0.059000 0.042000 ]
+                      inertiaMatrix [
+                        2.076000e-02 2.179000e-02 7.790000e-03
+                        0.000000e+00 -3.626000e-03 0.000000e+00
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "iiwa2_link_1"
+              boundingObject USE link_1
+              physics Physics {
+                density -1
+                mass 3.452500
+                centerOfMass [ 0.000000 -0.030000 0.120000 ]
+                inertiaMatrix [
+                  2.183000e-02 7.703000e-03 2.083000e-02
+                  0.000000e+00 0.000000e+00 -3.887000e-03
+                ]
+              }
+            }
+          }
+        ]
+        name "iiwa2_link_0"
+        boundingObject USE link_0
+        physics Physics {
+          density -1
+          mass 5.000000
+          centerOfMass [ -0.100000 0.000000 0.070000 ]
+          inertiaMatrix [
+            5.000000e-02 6.000000e-02 3.000000e-02
+            0.000000e+00 0.000000e+00 0.000000e+00
+          ]
+        }
+      }
+    Solid {
+        translation -0.280736 -0.804148 0.000000
+        rotation 0.000000 0.000000 1.000000 0.000000
+        children [
+          Transform {
+            translation 0.000000 0.000000 0.000000
+            rotation 0.000000 0.000000 -1.000000 1.570796
+            children [
+              Shape {
+                appearance DEF c3_base_link_material PBRAppearance {
+                  baseColor 1.000000 1.000000 1.000000
+                  transparency 0.000000
+                  roughness 1.000000
+                  metalness 0
+                  emissiveColor 0.000000 0.000000 0.000000
+                }
+                geometry DEF base_link Mesh {
+                  url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/base_link.stl"
+                }
+              }
+            ]
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.000000 1.000000
+              anchor 0.000000 0.000000 0.196500
+              dampingConstant 0.0
+              staticFriction 0.0
+            }
+            device [
+              RotationalMotor {
+                name "c3_joint_1"
+                maxVelocity 7.85
+                minPosition -2.9671
+                maxPosition 2.9671
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "c3_joint_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.000000 0.000000 0.196500
+              rotation 0.000000 0.000000 1.000000 0.000000
+              children [
+                Transform {
+                  translation 0.000000 0.000000 0.000000
+                  rotation 0.000000 0.000000 -1.000000 1.570796
+                  children [
+                    Shape {
+                      appearance DEF c3_link_1_material PBRAppearance {
+                        baseColor 1.000000 1.000000 1.000000
+                        transparency 0.000000
+                        roughness 1.000000
+                        metalness 0
+                        emissiveColor 0.000000 0.000000 0.000000
+                      }
+                      geometry DEF link_1 Mesh {
+                        url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/link_1.stl"
+                      }
+                    }
+                  ]
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000000 -1.000000 0.000000
+                    anchor 0.100000 0.000000 0.123500
+                    dampingConstant 0.0
+                    staticFriction 0.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "c3_joint_2"
+                      maxVelocity 7.85
+                      minPosition -2.7925
+                      maxTorque 10000
+                    }
+                    PositionSensor {
+                      name "c3_joint_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.100000 0.000000 0.123500
+                    rotation 0.000000 0.000000 1.000000 0.000000
+                    children [
+                      Transform {
+                        translation 0.000000 0.000000 0.000000
+                        rotation 0.000000 0.000000 -1.000000 1.570796
+                        children [
+                          Shape {
+                            appearance DEF c3_link_2_material PBRAppearance {
+                              baseColor 1.000000 1.000000 1.000000
+                              transparency 0.000000
+                              roughness 1.000000
+                              metalness 0
+                              emissiveColor 0.000000 0.000000 0.000000
+                            }
+                            geometry DEF link_2 Mesh {
+                              url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/link_2.stl"
+                            }
+                          }
+                        ]
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0.000000 -1.000000 0.000000
+                          anchor 0.000000 0.000000 0.250000
+                          dampingConstant 0.0
+                          staticFriction 0.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "c3_joint_3"
+                            maxVelocity 8.97
+                            minPosition -0.8901
+                            maxPosition 0.8901
+                            maxTorque 10000
+                          }
+                          PositionSensor {
+                            name "c3_joint_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0.000000 0.000000 0.250000
+                          rotation 0.000000 0.000000 1.000000 0.000000
+                          children [
+                            Transform {
+                              translation 0.000000 0.000000 0.000000
+                              rotation 0.000000 0.000000 -1.000000 1.570796
+                              children [
+                                Shape {
+                                  appearance DEF c3_link_3_material PBRAppearance {
+                                    baseColor 1.000000 1.000000 1.000000
+                                    transparency 0.000000
+                                    roughness 1.000000
+                                    metalness 0
+                                    emissiveColor 0.000000 0.000000 0.000000
+                                  }
+                                  geometry DEF link_3 Mesh {
+                                    url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/link_3.stl"
+                                  }
+                                }
+                              ]
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis -1.000000 0.000000 0.000000
+                                anchor 0.000000 0.000000 0.000000
+                                dampingConstant 0.0
+                                staticFriction 0.0
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "c3_joint_4"
+                                  maxVelocity 9.65
+                                  minPosition -1.57
+                                  maxPosition 1.57
+                                  maxTorque 10000
+                                }
+                                PositionSensor {
+                                  name "c3_joint_4_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation 0.000000 0.000000 0.000000
+                                rotation 0.000000 0.000000 1.000000 0.000000
+                                children [
+                                  Transform {
+                                    translation 0.000000 0.000000 0.000000
+                                    rotation 0.000000 0.000000 -1.000000 1.570796
+                                    children [
+                                      Shape {
+                                        appearance DEF c3_link_4_material PBRAppearance {
+                                          baseColor 1.000000 1.000000 1.000000
+                                          transparency 0.000000
+                                          roughness 1.000000
+                                          metalness 0
+                                          emissiveColor 0.000000 0.000000 0.000000
+                                        }
+                                        geometry DEF link_4 Mesh {
+                                          url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/link_4.stl"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 0.000000 -1.000000 0.000000
+                                      anchor 0.250000 0.000000 0.000000
+                                      dampingConstant 0.0
+                                      staticFriction 0.0
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "c3_joint_5"
+                                        maxVelocity 9.65
+                                        minPosition -1.57
+                                        maxPosition 1.57
+                                        maxTorque 10000
+                                      }
+                                      PositionSensor {
+                                        name "c3_joint_5_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation 0.250000 0.000000 0.000000
+                                      rotation 0.000000 0.000000 1.000000 0.000000
+                                      children [
+                                        Transform {
+                                          translation 0.000000 0.000000 0.000000
+                                          rotation 0.000000 0.000000 -1.000000 1.570796
+                                          children [
+                                            Shape {
+                                              appearance DEF c3_link_5_material PBRAppearance {
+                                                baseColor 1.000000 1.000000 1.000000
+                                                transparency 0.000000
+                                                roughness 1.000000
+                                                metalness 0
+                                                emissiveColor 0.000000 0.000000 0.000000
+                                              }
+                                              geometry DEF link_5 Mesh {
+                                                url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/link_5.stl"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis -1.000000 0.000000 0.000000
+                                            anchor 0.060000 0.000000 0.000000
+                                            dampingConstant 0.0
+                                            staticFriction 0.0
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "c3_joint_6"
+                                              maxVelocity 12.56
+                                              minPosition -1.57
+                                              maxPosition 1.57
+                                              maxTorque 10000
+                                            }
+                                            PositionSensor {
+                                              name "c3_joint_6_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation 0.060000 0.000000 0.000000
+                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                            children [
+                                              Transform {
+                                                translation 0.000000 0.000000 0.000000
+                                                rotation 0.000000 0.000000 -1.000000 1.570796
+                                                children [
+                                                  Shape {
+                                                    appearance DEF c3_link_6_material PBRAppearance {
+                                                      baseColor 1.000000 1.000000 1.000000
+                                                      transparency 0.000000
+                                                      roughness 1.000000
+                                                      metalness 0
+                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                    }
+                                                    geometry DEF link_6 Mesh {
+                                                      url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/link_6.stl"
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                              Solid {
+                                                translation 0.005000 -0.025000 0.063000
+                                                rotation 0.000000 1.000000 0.000000 1.570000
+                                                children [
+                                                  Shape {
+                                                    appearance DEF c3_cup_material PBRAppearance {
+                                                      baseColor 1.000000 1.000000 1.000000
+                                                      transparency 0.000000
+                                                      roughness 1.000000
+                                                      metalness 0
+                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                    }
+                                                    geometry DEF suction_cup Mesh {
+                                                      url "/home/cam/webot_ws/src/epson_experimental/epson_c3_support/meshes/c3a601s/visual/suction_cup.STL"
+                                                    }
+                                                  }
+                                                ]
+                                                name "c3_cup"
+                                                boundingObject USE suction_cup
+                                                physics Physics {
+                                                }
+                                              }
+                                            ]
+                                            name "c3_link_6"
+                                            boundingObject Transform {
+                                              translation 0.000000 0.000000 0.000000
+                                              rotation 0.000000 0.000000 -1.000000 1.570796
+                                              children [
+                                                USE link_6
+                                              ]
+                                            }
+                                            physics Physics {
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "c3_link_5"
+                                      boundingObject Transform {
+                                        translation 0.000000 0.000000 0.000000
+                                        rotation 0.000000 0.000000 -1.000000 1.570796
+                                        children [
+                                          USE link_5
+                                        ]
+                                      }
+                                      physics Physics {
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "c3_link_4"
+                                boundingObject Transform {
+                                  translation 0.000000 0.000000 0.000000
+                                  rotation 0.000000 0.000000 -1.000000 1.570796
+                                  children [
+                                    USE link_4
+                                  ]
+                                }
+                                physics Physics {
+                                }
+                              }
+                            }
+                          ]
+                          name "c3_link_3"
+                          boundingObject Transform {
+                            translation 0.000000 0.000000 0.000000
+                            rotation 0.000000 0.000000 -1.000000 1.570796
+                            children [
+                              USE link_3
+                            ]
+                          }
+                          physics Physics {
+                          }
+                        }
+                      }
+                    ]
+                    name "c3_link_2"
+                    boundingObject Transform {
+                      translation 0.000000 0.000000 0.000000
+                      rotation 0.000000 0.000000 -1.000000 1.570796
+                      children [
+                        USE link_2
+                      ]
+                    }
+                    physics Physics {
+                    }
+                  }
+                }
+              ]
+              name "c3_link_1"
+              boundingObject Transform {
+                translation 0.000000 0.000000 0.000000
+                rotation 0.000000 0.000000 -1.000000 1.570796
+                children [
+                  USE link_1
+                ]
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "c3_base_link"
+        boundingObject Transform {
+          translation 0.000000 0.000000 0.000000
+          rotation 0.000000 0.000000 -1.000000 1.570796
+          children [
+            USE base_link
+          ]
+        }
+        physics Physics {
+        }
+      }
+    Solid {
+        translation 0.734133 -0.648617 0.000000
+        rotation 0.000000 0.000000 1.000000 3.140000
+        children [
+          Shape {
+            appearance DEF s5_base_link_material PBRAppearance {
+              baseColor 0.792157 0.819608 0.933333
+              transparency 0.000000
+              roughness 1.000000
+              metalness 0
+              emissiveColor 0.000000 0.000000 0.000000
+            }
+            geometry DEF base_link Mesh {
+              url "/home/cam/webot_ws/src/epson_experimental/s5_description/meshes/base_link.STL"
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0.000000 0.028560 0.999592
+              anchor 0.000000 0.005305 0.185674
+              dampingConstant 0.0
+              staticFriction 0.0
+            }
+            device [
+              RotationalMotor {
+                name "s5_joint_1"
+                maxVelocity 6.56
+                minPosition -2.9671
+                maxPosition 2.9671
+                maxTorque 10000
+              }
+              PositionSensor {
+                name "s5_joint_1_sensor"
+              }
+            ]
+            endPoint Solid {
+              translation 0.000000 0.005305 0.185674
+              rotation -1.000000 0.000000 0.000000 0.028564
+              children [
+                Shape {
+                  appearance DEF s5_link_1_material PBRAppearance {
+                    baseColor 0.792157 0.819608 0.933333
+                    transparency 0.000000
+                    roughness 1.000000
+                    metalness 0
+                    emissiveColor 0.000000 0.000000 0.000000
+                  }
+                  geometry DEF link_1 Mesh {
+                    url "/home/cam/webot_ws/src/epson_experimental/s5_description/meshes/link_1.STL"
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0.000000 -1.000000 0.000000
+                    anchor 0.088000 0.000000 0.144250
+                    dampingConstant 0.0
+                    staticFriction 0.0
+                  }
+                  device [
+                    RotationalMotor {
+                      name "s5_joint_2"
+                      maxVelocity 6.11
+                      minPosition -2.618
+                      maxPosition 1.1345
+                      maxTorque 10000
+                    }
+                    PositionSensor {
+                      name "s5_joint_2_sensor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0.088000 0.000000 0.144250
+                    rotation 0.000000 -0.707107 -0.707107 3.141593
+                    children [
+                      Shape {
+                        appearance DEF s5_link_2_material PBRAppearance {
+                          baseColor 0.792157 0.819608 0.933333
+                          transparency 0.000000
+                          roughness 1.000000
+                          metalness 0
+                          emissiveColor 0.000000 0.000000 0.000000
+                        }
+                        geometry DEF link_2 Mesh {
+                          url "/home/cam/webot_ws/src/epson_experimental/s5_description/meshes/link_2.STL"
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0.000000 0.000000 -1.000000
+                          anchor 0.000000 0.310000 0.000000
+                          dampingConstant 0.0
+                          staticFriction 0.0
+                        }
+                        device [
+                          RotationalMotor {
+                            name "s5_joint_3"
+                            maxVelocity 6.98
+                            minPosition -1.25
+                            maxPosition 3.316
+                            maxTorque 10000
+                          }
+                          PositionSensor {
+                            name "s5_joint_3_sensor"
+                          }
+                        ]
+                        endPoint Solid {
+                          translation 0.000000 0.310000 0.000000
+                          rotation 0.000000 0.000000 1.000000 0.000000
+                          children [
+                            Shape {
+                              appearance DEF s5_link_3_material PBRAppearance {
+                                baseColor 0.792157 0.819608 0.933333
+                                transparency 0.000000
+                                roughness 1.000000
+                                metalness 0
+                                emissiveColor 0.000000 0.000000 0.000000
+                              }
+                              geometry DEF link_3 Mesh {
+                                url "/home/cam/webot_ws/src/epson_experimental/s5_description/meshes/link_3.STL"
+                              }
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                axis 1.000000 0.000000 -0.000000
+                                anchor -0.068500 0.040000 -0.004000
+                                dampingConstant 0.0
+                                staticFriction 0.0
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "s5_joint_4"
+                                  maxVelocity 7.85
+                                  minPosition -3.316
+                                  maxPosition 3.316
+                                  maxTorque 10000
+                                }
+                                PositionSensor {
+                                  name "s5_joint_4_sensor"
+                                }
+                              ]
+                              endPoint Solid {
+                                translation -0.068500 0.040000 -0.004000
+                                rotation 0.000000 1.000000 0.000000 1.570796
+                                children [
+                                  Shape {
+                                    appearance DEF s5_link_4_material PBRAppearance {
+                                      baseColor 0.792157 0.819608 0.933333
+                                      transparency 0.000000
+                                      roughness 1.000000
+                                      metalness 0
+                                      emissiveColor 0.000000 0.000000 0.000000
+                                    }
+                                    geometry DEF link_4 Mesh {
+                                      url "/home/cam/webot_ws/src/epson_experimental/s5_description/meshes/link_4.STL"
+                                    }
+                                  }
+                                  HingeJoint {
+                                    jointParameters HingeJointParameters {
+                                      axis 1.000000 -0.000000 0.000000
+                                      anchor 0.000000 0.000000 -0.237000
+                                      dampingConstant 0.0
+                                      staticFriction 0.0
+                                    }
+                                    device [
+                                      RotationalMotor {
+                                        name "s5_joint_5"
+                                        maxVelocity 7.85
+                                        minPosition -2.3562
+                                        maxPosition 2.3562
+                                        maxTorque 10000
+                                      }
+                                      PositionSensor {
+                                        name "s5_joint_5_sensor"
+                                      }
+                                    ]
+                                    endPoint Solid {
+                                      translation 0.000000 0.000000 -0.237000
+                                      rotation 0.707107 -0.000000 0.707107 3.141593
+                                      children [
+                                        Shape {
+                                          appearance DEF s5_link_5_material PBRAppearance {
+                                            baseColor 0.792157 0.819608 0.933333
+                                            transparency 0.000000
+                                            roughness 1.000000
+                                            metalness 0
+                                            emissiveColor 0.000000 0.000000 0.000000
+                                          }
+                                          geometry DEF link_5 Mesh {
+                                            url "/home/cam/webot_ws/src/epson_experimental/s5_description/meshes/link_5.STL"
+                                          }
+                                        }
+                                        HingeJoint {
+                                          jointParameters HingeJointParameters {
+                                            axis 1.000000 -0.000000 0.000000
+                                            anchor -0.050000 0.000000 0.001000
+                                            dampingConstant 0.0
+                                            staticFriction 0.0
+                                          }
+                                          device [
+                                            RotationalMotor {
+                                              name "s5_joint_6"
+                                              maxVelocity 12.57
+                                              minPosition -6.28
+                                              maxPosition 6.28
+                                              maxTorque 10000
+                                            }
+                                            PositionSensor {
+                                              name "s5_joint_6_sensor"
+                                            }
+                                          ]
+                                          endPoint Solid {
+                                            translation -0.050000 0.000000 0.001000
+                                            rotation 0.577350 0.577351 0.577350 2.094394
+                                            children [
+                                              Shape {
+                                                appearance DEF s5_link_6_material PBRAppearance {
+                                                  baseColor 0.792157 0.819608 0.933333
+                                                  transparency 0.000000
+                                                  roughness 1.000000
+                                                  metalness 0
+                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                }
+                                                geometry DEF link_6 Mesh {
+                                                  url "/home/cam/webot_ws/src/epson_experimental/s5_description/meshes/link_6.STL"
+                                                }
+                                              }
+                                              Solid {
+                                                translation 0.000000 0.000000 -0.030000
+                                                rotation 0.923880 0.382683 0.000000 3.141593
+                                                children [
+                                                  Shape {
+                                                    appearance DEF robotiq_85_base_link_material PBRAppearance {
+                                                      baseColor 0.100000 0.100000 0.100000
+                                                      transparency 0.000000
+                                                      roughness 1.000000
+                                                      metalness 0
+                                                      emissiveColor 0.000000 0.000000 0.000000
+                                                    }
+                                                    geometry DEF robotiq_85_base_link_fine Mesh {
+                                                      url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/robotiq_85_base_link_fine.stl"
+                                                    }
+                                                  }
+                                                  HingeJoint {
+                                                    jointParameters HingeJointParameters {
+                                                      axis 0.000000 -1.000000 0.000000
+                                                      anchor 0.030601 0.000000 0.062792
+                                                      dampingConstant 0.0
+                                                      staticFriction 0.0
+                                                    }
+                                                    device [
+                                                      RotationalMotor {
+                                                        name "finger_joint"
+                                                        maxVelocity 2.0
+                                                        maxPosition 0.725
+                                                        maxTorque 1000.0
+                                                      }
+                                                      PositionSensor {
+                                                        name "finger_joint_sensor"
+                                                      }
+                                                    ]
+                                                    endPoint Solid {
+                                                      translation 0.030601 0.000000 0.062792
+                                                      rotation 0.000000 0.000000 1.000000 0.000000
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF left_outer_knuckle_material PBRAppearance {
+                                                            baseColor 0.100000 0.100000 0.100000
+                                                            transparency 0.000000
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                            emissiveColor 0.000000 0.000000 0.000000
+                                                          }
+                                                          geometry DEF outer_knuckle_fine Mesh {
+                                                            url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_knuckle_fine.stl"
+                                                          }
+                                                        }
+                                                        Solid {
+                                                          translation 0.031691 0.000000 -0.001934
+                                                          rotation 0.000000 0.000000 1.000000 0.000000
+                                                          children [
+                                                            Shape {
+                                                              appearance DEF left_outer_finger_material PBRAppearance {
+                                                                baseColor 0.100000 0.100000 0.100000
+                                                                transparency 0.000000
+                                                                roughness 1.000000
+                                                                metalness 0
+                                                                emissiveColor 0.000000 0.000000 0.000000
+                                                              }
+                                                              geometry DEF outer_finger_fine Mesh {
+                                                                url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_finger_fine.stl"
+                                                              }
+                                                            }
+                                                          ]
+                                                          name "left_outer_finger"
+                                                          boundingObject DEF outer_finger_coarse Mesh {
+                                                            url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_finger_coarse.stl"
+                                                          }
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.027309
+                                                            centerOfMass [ 0.001315 0.000000 0.021540 ]
+                                                            inertiaMatrix [
+                                                              8.516296e-06 6.913333e-06 2.250068e-06
+                                                              2.581743e-19 3.838295e-07 -7.585899e-19
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "left_outer_knuckle"
+                                                      boundingObject DEF outer_knuckle_coarse Mesh {
+                                                        url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/outer_knuckle_coarse.stl"
+                                                      }
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.006848
+                                                        centerOfMass [ 0.017833 0.000000 0.002144 ]
+                                                        inertiaMatrix [
+                                                          2.668320e-07 1.388923e-06 1.266033e-06
+                                                          1.661423e-15 1.459456e-07 2.829512e-15
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
+                                                  HingeJoint {
+                                                    jointParameters HingeJointParameters {
+                                                      axis 0.000000 -1.000000 0.000000
+                                                      anchor 0.012700 0.000000 0.069307
+                                                      dampingConstant 0.0
+                                                      staticFriction 0.0
+                                                    }
+                                                    device [
+                                                      RotationalMotor {
+                                                        name "left_inner_knuckle_joint"
+                                                        maxVelocity 2.0
+                                                        maxPosition 0.8757
+                                                        maxTorque 1000.0
+                                                      }
+                                                      PositionSensor {
+                                                        name "left_inner_knuckle_joint_sensor"
+                                                      }
+                                                    ]
+                                                    endPoint Solid {
+                                                      translation 0.012700 0.000000 0.069307
+                                                      rotation 0.000000 0.000000 1.000000 0.000000
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF left_inner_knuckle_material PBRAppearance {
+                                                            baseColor 0.100000 0.100000 0.100000
+                                                            transparency 0.000000
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                            emissiveColor 0.000000 0.000000 0.000000
+                                                          }
+                                                          geometry DEF inner_knuckle_fine Mesh {
+                                                            url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_knuckle_fine.stl"
+                                                          }
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis 0.000000 -1.000000 0.000000
+                                                            anchor 0.034585 0.000000 0.045497
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "left_inner_finger_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "left_inner_finger_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.034585 0.000000 0.045497
+                                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF left_inner_finger_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry DEF inner_finger_fine Mesh {
+                                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_finger_fine.stl"
+                                                                }
+                                                              }
+                                                            ]
+                                                            name "left_inner_finger"
+                                                            boundingObject DEF inner_finger_coarse Mesh {
+                                                              url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_finger_coarse.stl"
+                                                            }
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.007243
+                                                              centerOfMass [ 0.006028 -0.000000 0.006699 ]
+                                                              inertiaMatrix [
+                                                                1.478243e-06 1.700645e-06 4.771513e-07
+                                                                -3.948845e-19 -3.452688e-07 3.505984e-19
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "left_inner_knuckle"
+                                                      boundingObject DEF inner_knuckle_coarse Mesh {
+                                                        url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/inner_knuckle_coarse.stl"
+                                                      }
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.011093
+                                                        centerOfMass [ 0.017098 -0.000000 0.022492 ]
+                                                        inertiaMatrix [
+                                                          4.233928e-06 3.965488e-06 3.240680e-06
+                                                          5.748979e-15 1.788557e-06 1.054647e-14
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
+                                                  HingeJoint {
+                                                    jointParameters HingeJointParameters {
+                                                      axis -0.000000 -1.000000 0.000000
+                                                      anchor -0.012700 0.000000 0.069308
+                                                      dampingConstant 0.0
+                                                      staticFriction 0.0
+                                                    }
+                                                    device [
+                                                      RotationalMotor {
+                                                        name "right_inner_knuckle_joint"
+                                                        maxVelocity 2.0
+                                                        maxPosition 0.8757
+                                                        maxTorque 1000.0
+                                                      }
+                                                      PositionSensor {
+                                                        name "right_inner_knuckle_joint_sensor"
+                                                      }
+                                                    ]
+                                                    endPoint Solid {
+                                                      translation -0.012700 0.000000 0.069308
+                                                      rotation 0.000000 0.000000 1.000000 3.141593
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF right_inner_knuckle_material PBRAppearance {
+                                                            baseColor 0.100000 0.100000 0.100000
+                                                            transparency 0.000000
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                            emissiveColor 0.000000 0.000000 0.000000
+                                                          }
+                                                          geometry USE inner_knuckle_fine
+                                                        }
+                                                        HingeJoint {
+                                                          jointParameters HingeJointParameters {
+                                                            axis 0.000000 1.000000 0.000000
+                                                            anchor 0.034106 0.000000 0.045857
+                                                            dampingConstant 0.0
+                                                            staticFriction 0.0
+                                                          }
+                                                          device [
+                                                            RotationalMotor {
+                                                              name "right_inner_finger_joint"
+                                                              maxVelocity 2.0
+                                                              maxPosition 0.8757
+                                                              maxTorque 1000.0
+                                                            }
+                                                            PositionSensor {
+                                                              name "right_inner_finger_joint_sensor"
+                                                            }
+                                                          ]
+                                                          endPoint Solid {
+                                                            translation 0.034106 0.000000 0.045857
+                                                            rotation 0.000000 0.000000 1.000000 0.000000
+                                                            children [
+                                                              Shape {
+                                                                appearance DEF right_inner_finger_material PBRAppearance {
+                                                                  baseColor 0.100000 0.100000 0.100000
+                                                                  transparency 0.000000
+                                                                  roughness 1.000000
+                                                                  metalness 0
+                                                                  emissiveColor 0.000000 0.000000 0.000000
+                                                                }
+                                                                geometry USE inner_finger_fine
+                                                              }
+                                                            ]
+                                                            name "right_inner_finger"
+                                                            boundingObject USE inner_finger_coarse
+                                                            physics Physics {
+                                                              density -1
+                                                              mass 0.007243
+                                                              centerOfMass [ 0.006028 -0.000000 0.006699 ]
+                                                              inertiaMatrix [
+                                                                1.478243e-06 1.700645e-06 4.771512e-07
+                                                                -3.959521e-19 -3.452687e-07 3.552865e-19
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "right_inner_knuckle"
+                                                      boundingObject USE inner_knuckle_coarse
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.011093
+                                                        centerOfMass [ 0.016861 0.000000 0.022670 ]
+                                                        inertiaMatrix [
+                                                          4.271348e-06 3.965488e-06 3.203260e-06
+                                                          -8.535685e-15 1.777742e-06 -8.451080e-15
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
+                                                  HingeJoint {
+                                                    jointParameters HingeJointParameters {
+                                                      axis -0.000000 -1.000000 0.000000
+                                                      anchor -0.030601 0.000000 0.062792
+                                                      dampingConstant 0.0
+                                                      staticFriction 0.0
+                                                    }
+                                                    device [
+                                                      RotationalMotor {
+                                                        name "right_outer_knuckle_joint"
+                                                        maxVelocity 2.0
+                                                        maxPosition 0.8757
+                                                        maxTorque 1000.0
+                                                      }
+                                                      PositionSensor {
+                                                        name "right_outer_knuckle_joint_sensor"
+                                                      }
+                                                    ]
+                                                    endPoint Solid {
+                                                      translation -0.030601 0.000000 0.062792
+                                                      rotation 0.000000 0.000000 1.000000 3.141593
+                                                      children [
+                                                        Shape {
+                                                          appearance DEF right_outer_knuckle_material PBRAppearance {
+                                                            baseColor 0.100000 0.100000 0.100000
+                                                            transparency 0.000000
+                                                            roughness 1.000000
+                                                            metalness 0
+                                                            emissiveColor 0.000000 0.000000 0.000000
+                                                          }
+                                                          geometry USE outer_knuckle_fine
+                                                        }
+                                                        Solid {
+                                                          translation 0.031710 0.000000 -0.001601
+                                                          rotation 0.000000 0.000000 1.000000 0.000000
+                                                          children [
+                                                            Shape {
+                                                              appearance DEF right_outer_finger_material PBRAppearance {
+                                                                baseColor 0.100000 0.100000 0.100000
+                                                                transparency 0.000000
+                                                                roughness 1.000000
+                                                                metalness 0
+                                                                emissiveColor 0.000000 0.000000 0.000000
+                                                              }
+                                                              geometry USE outer_finger_fine
+                                                            }
+                                                          ]
+                                                          name "right_outer_finger"
+                                                          boundingObject USE outer_finger_coarse
+                                                          physics Physics {
+                                                            density -1
+                                                            mass 0.027309
+                                                            centerOfMass [ 0.001088 -0.000000 0.021553 ]
+                                                            inertiaMatrix [
+                                                              8.523660e-06 6.913333e-06 2.242704e-06
+                                                              3.416834e-19 3.180037e-07 7.377267e-19
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                      name "right_outer_knuckle"
+                                                      boundingObject USE outer_knuckle_coarse
+                                                      physics Physics {
+                                                        density -1
+                                                        mass 0.006848
+                                                        centerOfMass [ 0.017810 0.000000 0.002331 ]
+                                                        inertiaMatrix [
+                                                          2.700044e-07 1.388923e-06 1.262861e-06
+                                                          1.595795e-15 1.563965e-07 2.823578e-15
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                                name "robotiq_85_base_link"
+                                                boundingObject DEF robotiq_85_base_link_coarse Mesh {
+                                                  url "/home/cam/webot_ws/src/gripper_description/meshes/robotiq/robotiq_85_base_link_coarse.stl"
+                                                }
+                                                physics Physics {
+                                                  density -1
+                                                  mass 0.309150
+                                                  centerOfMass [ 0.000220 -0.000000 0.030163 ]
+                                                  inertiaMatrix [
+                                                    2.897200e-04 3.073700e-04 1.991400e-04
+                                                    -5.787900e-10 -1.854300e-06 1.682000e-12
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                            name "s5_link_6"
+                                            boundingObject USE link_6
+                                            physics Physics {
+                                              density -1
+                                              mass 0.026987
+                                              centerOfMass [ 0.000000 0.000080 -0.017952 ]
+                                              inertiaMatrix [
+                                                5.333898e-06 5.368167e-06 7.958842e-06
+                                                3.176374e-21 8.999725e-22 1.634036e-08
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                      name "s5_link_5"
+                                      boundingObject USE link_5
+                                      physics Physics {
+                                        density -1
+                                        mass 0.318202
+                                        centerOfMass [ -0.012488 0.000119 0.001034 ]
+                                        inertiaMatrix [
+                                          2.024737e-04 3.117752e-04 3.393967e-04
+                                          4.135527e-07 -1.641204e-07 5.712387e-07
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                                name "s5_link_4"
+                                boundingObject USE link_4
+                                physics Physics {
+                                  density -1
+                                  mass 2.141442
+                                  centerOfMass [ -0.000000 0.001324 -0.105014 ]
+                                  inertiaMatrix [
+                                    1.094235e-02 1.164978e-02 4.099743e-03
+                                    -3.049113e-07 -2.006591e-06 -1.471225e-04
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                          name "s5_link_3"
+                          boundingObject USE link_3
+                          physics Physics {
+                            density -1
+                            mass 2.619582
+                            centerOfMass [ 0.012700 0.017930 -0.005079 ]
+                            inertiaMatrix [
+                              7.294275e-03 8.125322e-03 9.019977e-03
+                              8.095135e-04 -2.676537e-05 -3.367032e-05
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                    name "s5_link_2"
+                    boundingObject USE link_2
+                    physics Physics {
+                      density -1
+                      mass 5.370208
+                      centerOfMass [ 0.007803 0.136051 0.000123 ]
+                      inertiaMatrix [
+                        8.724748e-02 3.524194e-02 6.168513e-02
+                        -4.055546e-04 -2.853947e-05 7.331645e-04
+                      ]
+                    }
+                  }
+                }
+              ]
+              name "s5_link_1"
+              boundingObject USE link_1
+              physics Physics {
+                density -1
+                mass 3.091028
+                centerOfMass [ 0.039950 -0.001799 0.091893 ]
+                inertiaMatrix [
+                  1.261710e-02 1.801010e-02 1.381309e-02
+                  2.952847e-04 -5.575492e-03 3.442053e-04
+                ]
+              }
+            }
+          }
+        ]
+        name "s5_base_link"
+        boundingObject USE base_link
+        physics Physics {
+          density -1
+          mass 5.930598
+          centerOfMass [ -0.010767 0.002555 0.097412 ]
+          inertiaMatrix [
+            3.150854e-02 3.597000e-02 2.941307e-02
+            -1.310069e-04 -3.597663e-04 -2.446516e-04
+          ]
+        }
+      }
+    ]
+    
+    name IS name
+  }
+}
