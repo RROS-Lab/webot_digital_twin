@@ -16,12 +16,12 @@
 
 Please install webots prior launching the package, The recommended webots version is R2022a
 
-### Moveit installation 
+### MoveIt! installation 
 
 Please install Moveit using Moveit Tutorial before installation of Webots:
 https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html
 
-## addition package installation
+## Addition package installation
 ### URDF installation
 - Please clone repo abb_experimental in the `webot_digital_twin`:
 https://github.com/ros-industrial/abb_experimental
@@ -29,7 +29,7 @@ https://github.com/ros-industrial/abb_experimental
 https://github.com/gavanderhoorn/epson_experimental
 - Please clone repo iiwa_stack_cam in the `webot_digital_twin`:
 https://github.com/RROS-Lab/iiwa_stack_cam
--Remember to `catkin build` after complete with cloning all repository
+- Remember to `catkin build` after complete with cloning all repository
 ## Digital Twin 
 ### TO access digital twin 
 
