@@ -23,13 +23,13 @@ https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_star
 
 ## Addition package installation
 ### URDF installation
-- Please clone repo abb_experimental in the `webot_digital_twin`:
+- Please clone repo abb_experimental in the same directory as `webot_digital_twin`:
 https://github.com/ros-industrial/abb_experimental
-- Please clone repo abb_resource in the `webot_digital_twin`:
+- Please clone repo abb_resource in the same directory as`webot_digital_twin`:
 https://github.com/PickNikRobotics/abb_ros2/tree/rolling/abb_resources
-- Pleae clone repo epson_experiemental in the `webot_digital_twin`:
+- Pleae clone repo epson_experiemental in the same directory as `webot_digital_twin`:
 https://github.com/gavanderhoorn/epson_experimental
-- Please clone repo iiwa_stack_cam in the `webot_digital_twin`:
+- Please clone repo iiwa_stack_cam in the same directory as `webot_digital_twin`:
 https://github.com/RROS-Lab/iiwa_stack_cam
 - Remember to `catkin build` after complete with cloning all repository
 ## Digital Twin 
