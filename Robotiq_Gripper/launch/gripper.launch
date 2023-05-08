@@ -1,0 +1,3 @@
+<launch>
+  <node name="robotiq_gripper" pkg="robotiq_gripper" type="gripper_ctrl.py" output="screen"/>
+</launch>
